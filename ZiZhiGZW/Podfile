@@ -1,0 +1,17 @@
+platform :ios, "8.0"
+
+pod 'AFNetworking'
+pod 'MJRefresh'
+pod 'MJExtension'
+pod 'SDWebImage'
+pod 'XLForm'
+pod 'MBProgressHUD'
+pod 'HMSegmentedControl'
+pod 'SDCycleScrollView'
+pod 'EAIntroView'
+pod 'MarqueeLabel'
+
+
+target :ZiZhiGZWTests, :exclusive => true do
+# pod 'Kiwi'
+end

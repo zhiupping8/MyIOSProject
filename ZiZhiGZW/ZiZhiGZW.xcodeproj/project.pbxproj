@@ -1,0 +1,1299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB72A899EA45E1521798BBA3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 382FE5F2B67AE3133E103F47 /* libPods.a */; };
+		F901807E1C16B43200E1F54C /* ZiZhiNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F901807D1C16B43200E1F54C /* ZiZhiNavigationViewController.m */; };
+		F9049C5C1C1A84BF006206D9 /* ZiZhiWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9049C5B1C1A84BF006206D9 /* ZiZhiWebViewController.m */; };
+		F9049C5F1C1A9398006206D9 /* ZiZhiBannerItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9049C5E1C1A9398006206D9 /* ZiZhiBannerItemModel.m */; };
+		F9049C621C1AAE02006206D9 /* ZiZhiMainalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9049C611C1AAE02006206D9 /* ZiZhiMainalModel.m */; };
+		F906786F1C172144009B362E /* ZiZhiApplyVipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F906786E1C172144009B362E /* ZiZhiApplyVipViewController.m */; };
+		F90678721C172270009B362E /* ZiZhiHomeVipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90678711C172270009B362E /* ZiZhiHomeVipViewController.m */; };
+		F90678751C172839009B362E /* ZiZhiProgramSignUpDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90678741C172839009B362E /* ZiZhiProgramSignUpDetailViewController.m */; };
+		F90678791C172A07009B362E /* ZiZhiProgramSignUpTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F90678781C172A07009B362E /* ZiZhiProgramSignUpTableViewCell.m */; };
+		F9075B521C1E9F320018B0BF /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F9075B501C1E9F320018B0BF /* AlipaySDK.bundle */; };
+		F9075B531C1E9F320018B0BF /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9075B511C1E9F320018B0BF /* AlipaySDK.framework */; };
+		F9075B5B1C1EA0DB0018B0BF /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9075B561C1EA0DB0018B0BF /* read_me.txt */; };
+		F9075B631C1EA1620018B0BF /* ApiXml.mm in Sources */ = {isa = PBXBuildFile; fileRef = F9075B5E1C1EA1620018B0BF /* ApiXml.mm */; };
+		F9075B641C1EA1620018B0BF /* payRequsestHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = F9075B601C1EA1620018B0BF /* payRequsestHandler.mm */; };
+		F9075B651C1EA1620018B0BF /* WXUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = F9075B621C1EA1620018B0BF /* WXUtil.mm */; };
+		F9075B671C1EA79E0018B0BF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9075B661C1EA79E0018B0BF /* CoreTelephony.framework */; };
+		F9075B6B1C1EA9030018B0BF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F9075B6A1C1EA9030018B0BF /* libsqlite3.tbd */; };
+		F9075B6C1C1EA9840018B0BF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F9075B681C1EA8E70018B0BF /* libsqlite3.0.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F9075B6D1C1EA9F90018B0BF /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9075B551C1EA0DB0018B0BF /* libWeChatSDK.a */; };
+		F9075B711C1EAB460018B0BF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F9075B701C1EAB460018B0BF /* libc++.tbd */; };
+		F9075B731C1EAB5C0018B0BF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F9075B721C1EAB5C0018B0BF /* libz.tbd */; };
+		F9075B761C1EBF030018B0BF /* ZiZhiWeiXinPayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9075B751C1EBF030018B0BF /* ZiZhiWeiXinPayModel.m */; };
+		F9075B791C1ECA770018B0BF /* ZiZhiAfficheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9075B781C1ECA770018B0BF /* ZiZhiAfficheModel.m */; };
+		F92ABEDF1C19244100109CE5 /* ZiZhiOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F92ABEDE1C19244100109CE5 /* ZiZhiOrderModel.m */; };
+		F92ABEE21C19250600109CE5 /* ZiZhiProgramModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F92ABEE11C19250600109CE5 /* ZiZhiProgramModel.m */; };
+		F92ABEE51C1925F900109CE5 /* ZiZhiProgramEnrollModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F92ABEE41C1925F900109CE5 /* ZiZhiProgramEnrollModel.m */; };
+		F92ABEE81C19269500109CE5 /* ZiZhiProgramUpdateRecordsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F92ABEE71C19269500109CE5 /* ZiZhiProgramUpdateRecordsModel.m */; };
+		F92ABEEB1C19271200109CE5 /* ZiZhiSqzpListItemResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F92ABEEA1C19271200109CE5 /* ZiZhiSqzpListItemResultModel.m */; };
+		F92ABEEE1C19278100109CE5 /* ZiZhiTicketApplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F92ABEED1C19278100109CE5 /* ZiZhiTicketApplyModel.m */; };
+		F945BD5A1C1E7340008905D2 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F945BD581C1E7340008905D2 /* libBPush.a */; };
+		F945BD5B1C1E7340008905D2 /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = F945BD591C1E7340008905D2 /* test.caf */; };
+		F97658081C16C1C500E48162 /* ZiZhiApplyTicketDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97658071C16C1C500E48162 /* ZiZhiApplyTicketDetailViewController.m */; };
+		F976580D1C16C9E600E48162 /* ZiZhiHomeApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F976580C1C16C9E600E48162 /* ZiZhiHomeApplyViewController.m */; };
+		F97658101C16CFDB00E48162 /* ZiZhiHomeProgramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F976580F1C16CFDB00E48162 /* ZiZhiHomeProgramViewController.m */; };
+		F97658131C16D00800E48162 /* ZiZhiProgramSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97658121C16D00800E48162 /* ZiZhiProgramSignUpViewController.m */; };
+		F97ECF7F1C1C642D00E2C6B9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97ECF7E1C1C642D00E2C6B9 /* CoreLocation.framework */; };
+		F97ECF811C1C646100E2C6B9 /* map.html in Resources */ = {isa = PBXBuildFile; fileRef = F97ECF801C1C646100E2C6B9 /* map.html */; };
+		F98A43A31C1D1EDD002E4D6A /* ZiZhiChooseTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98A43A21C1D1EDD002E4D6A /* ZiZhiChooseTimeViewController.m */; };
+		F99069CB1C1C376D00FDFE45 /* AdmobCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F99069C71C1C376D00FDFE45 /* AdmobCollectionViewCell.m */; };
+		F99069CC1C1C376D00FDFE45 /* AdmobCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F99069C81C1C376D00FDFE45 /* AdmobCollectionViewCell.xib */; };
+		F99069CD1C1C376D00FDFE45 /* BRAdmobView.m in Sources */ = {isa = PBXBuildFile; fileRef = F99069CA1C1C376D00FDFE45 /* BRAdmobView.m */; };
+		F993EBFE1C15C8B600EF3022 /* ZiZhiSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F993EBFD1C15C8B600EF3022 /* ZiZhiSettingViewController.m */; };
+		F998CEED1C2028B700A81DBB /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F998CEEC1C2028B700A81DBB /* WXApiManager.m */; };
+		F998CEEF1C20521200A81DBB /* 首页.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F998CEEE1C20521200A81DBB /* 首页.jpg */; };
+		F9BD55F31C2408A70037B066 /* ZiZhiPayShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BD55F21C2408A70037B066 /* ZiZhiPayShowViewController.m */; };
+		F9BD55F61C2413030037B066 /* ZiZhiPayViewValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BD55F51C2413030037B066 /* ZiZhiPayViewValueModel.m */; };
+		F9D0E3F01C0AD6640012CAA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D0E3EF1C0AD6640012CAA4 /* main.m */; };
+		F9D0E3F31C0AD6640012CAA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D0E3F21C0AD6640012CAA4 /* AppDelegate.m */; };
+		F9D0E3FC1C0AD6640012CAA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D0E3FA1C0AD6640012CAA4 /* Main.storyboard */; };
+		F9D0E3FE1C0AD6640012CAA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D0E3FD1C0AD6640012CAA4 /* Assets.xcassets */; };
+		F9D0E4011C0AD6640012CAA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D0E3FF1C0AD6640012CAA4 /* LaunchScreen.storyboard */; };
+		F9D0E40C1C0AD6640012CAA4 /* ZiZhiGZWTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D0E40B1C0AD6640012CAA4 /* ZiZhiGZWTests.m */; };
+		F9D0E4171C0AD6640012CAA4 /* ZiZhiGZWUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D0E4161C0AD6640012CAA4 /* ZiZhiGZWUITests.m */; };
+		F9E2376E1C0BFB56004F74B7 /* ZiZhiHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2376D1C0BFB56004F74B7 /* ZiZhiHomeViewController.m */; };
+		F9E2F7DF1C1BFCC0007AC784 /* ZiZhiSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2F7DE1C1BFCC0007AC784 /* ZiZhiSettingModel.m */; };
+		F9E472CE1C0C02BF0023DE60 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E472CD1C0C02BF0023DE60 /* Utils.m */; };
+		F9E477FC1C181CD9004DA412 /* ZiZhiUserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E477FB1C181CD9004DA412 /* ZiZhiUserCenterViewController.m */; };
+		F9E478001C182688004DA412 /* ZiZhiMyTicketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E477FF1C182688004DA412 /* ZiZhiMyTicketTableViewCell.m */; };
+		F9E478031C1826AC004DA412 /* ZiZhiMyVipTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E478021C1826AC004DA412 /* ZiZhiMyVipTableViewCell.m */; };
+		F9E478061C182F2F004DA412 /* ZiZhiMySignUpTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E478051C182F2F004DA412 /* ZiZhiMySignUpTableViewCell.m */; };
+		F9E478091C18301F004DA412 /* ZiZhiMyTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E478081C18301F004DA412 /* ZiZhiMyTicketViewController.m */; };
+		F9E4780C1C18302C004DA412 /* ZiZhiMyVipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E4780B1C18302C004DA412 /* ZiZhiMyVipViewController.m */; };
+		F9E4780F1C183053004DA412 /* ZiZhiMySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E4780E1C183053004DA412 /* ZiZhiMySignUpViewController.m */; };
+		F9E63C481C21252200972ED8 /* ZiZhiAdDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E63C471C21252200972ED8 /* ZiZhiAdDetailViewController.m */; };
+		F9E63C5D1C219DF200972ED8 /* APP1.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E63C5A1C219DF200972ED8 /* APP1.png */; };
+		F9E63C5E1C219DF200972ED8 /* APP2.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E63C5B1C219DF200972ED8 /* APP2.png */; };
+		F9E63C5F1C219DF200972ED8 /* APP3.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E63C5C1C219DF200972ED8 /* APP3.png */; };
+		F9E63C611C21AAD000972ED8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E63C601C21AAD000972ED8 /* Foundation.framework */; };
+		F9E63C631C21AAE600972ED8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E63C621C21AAE600972ED8 /* SystemConfiguration.framework */; };
+		F9E6A3C41C0ADD2B00C3BABA /* ZiZhiNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6A3C11C0ADD2B00C3BABA /* ZiZhiNetworkManager.m */; };
+		F9E6A3C51C0ADD2B00C3BABA /* ZiZhiNetworkResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6A3C31C0ADD2B00C3BABA /* ZiZhiNetworkResponseModel.m */; };
+		F9E6A3CE1C0ADFC200C3BABA /* qq_baoming_zixun.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E6A3C71C0ADFC200C3BABA /* qq_baoming_zixun.png */; };
+		F9E6A3CF1C0ADFC200C3BABA /* qq_divider.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E6A3C81C0ADFC200C3BABA /* qq_divider.png */; };
+		F9E6A3D01C0ADFC200C3BABA /* qq_hezuo_zixun.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E6A3C91C0ADFC200C3BABA /* qq_hezuo_zixun.png */; };
+		F9E6A3D11C0ADFC200C3BABA /* qq_thrid.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E6A3CA1C0ADFC200C3BABA /* qq_thrid.png */; };
+		F9E6A3D21C0ADFC200C3BABA /* qq_time.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E6A3CB1C0ADFC200C3BABA /* qq_time.png */; };
+		F9E6A3D41C0ADFC200C3BABA /* qq_zuixin_zixun.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E6A3CD1C0ADFC200C3BABA /* qq_zuixin_zixun.png */; };
+		F9E6A3D61C0AE29C00C3BABA /* qq_zengpiao_zixun.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E6A3D51C0AE29C00C3BABA /* qq_zengpiao_zixun.png */; };
+		F9E6A3D91C0B38ED00C3BABA /* ZiZhiServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6A3D81C0B38ED00C3BABA /* ZiZhiServiceViewController.m */; };
+		F9E6BB411C1AB99A0093AEEF /* ZiZhiTicketDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6BB401C1AB99A0093AEEF /* ZiZhiTicketDetailModel.m */; };
+		F9E6BB441C1ABE720093AEEF /* ZiZhiVipDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6BB431C1ABE720093AEEF /* ZiZhiVipDetailModel.m */; };
+		F9E6BB471C1ABFCF0093AEEF /* ZiZhiProgramListItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6BB461C1ABFCF0093AEEF /* ZiZhiProgramListItemModel.m */; };
+		F9E6BB4A1C1AD73A0093AEEF /* ZiZhiProgramDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6BB491C1AD73A0093AEEF /* ZiZhiProgramDetailModel.m */; };
+		F9E6BB4D1C1AF51A0093AEEF /* ZiZhiUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6BB4C1C1AF51A0093AEEF /* ZiZhiUserInfoModel.m */; };
+		F9E6BB501C1AF5300093AEEF /* ZiZhiUserInfoLocalHelperModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E6BB4F1C1AF5300093AEEF /* ZiZhiUserInfoLocalHelperModel.m */; };
+		F9EBAEB01C19CC57005EFB34 /* ZiZhiADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EBAEAF1C19CC57005EFB34 /* ZiZhiADViewController.m */; };
+		F9EBAEB31C19CD47005EFB34 /* ZiZhiADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EBAEB21C19CD47005EFB34 /* ZiZhiADModel.m */; };
+		F9EBAEB61C19DD77005EFB34 /* ZiZhiLocalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EBAEB51C19DD77005EFB34 /* ZiZhiLocalHelper.m */; };
+		F9EBAEB91C19E4E4005EFB34 /* ZiZhiRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EBAEB81C19E4E4005EFB34 /* ZiZhiRootViewController.m */; };
+		F9ED96BC1C0E9A110092C5EE /* no_img_tip.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9ED96BB1C0E9A110092C5EE /* no_img_tip.jpg */; };
+		F9ED96C21C0EA2FA0092C5EE /* ZiZhiApplyTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ED96C11C0EA2FA0092C5EE /* ZiZhiApplyTicketViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9D0E4081C0AD6640012CAA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9D0E3E31C0AD6640012CAA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9D0E3EA1C0AD6640012CAA4;
+			remoteInfo = ZiZhiGZW;
+		};
+		F9D0E4131C0AD6640012CAA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9D0E3E31C0AD6640012CAA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9D0E3EA1C0AD6640012CAA4;
+			remoteInfo = ZiZhiGZW;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		20C44FD010121F4D3F3CCE57 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		382FE5F2B67AE3133E103F47 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		51C0B30B304E24210AA795F1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F901807C1C16B43200E1F54C /* ZiZhiNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiNavigationViewController.h; sourceTree = "<group>"; };
+		F901807D1C16B43200E1F54C /* ZiZhiNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiNavigationViewController.m; sourceTree = "<group>"; };
+		F9049C5A1C1A84BF006206D9 /* ZiZhiWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiWebViewController.h; sourceTree = "<group>"; };
+		F9049C5B1C1A84BF006206D9 /* ZiZhiWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiWebViewController.m; sourceTree = "<group>"; };
+		F9049C5D1C1A9398006206D9 /* ZiZhiBannerItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiBannerItemModel.h; sourceTree = "<group>"; };
+		F9049C5E1C1A9398006206D9 /* ZiZhiBannerItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiBannerItemModel.m; sourceTree = "<group>"; };
+		F9049C601C1AAE02006206D9 /* ZiZhiMainalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiMainalModel.h; sourceTree = "<group>"; };
+		F9049C611C1AAE02006206D9 /* ZiZhiMainalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiMainalModel.m; sourceTree = "<group>"; };
+		F906786D1C172144009B362E /* ZiZhiApplyVipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiApplyVipViewController.h; sourceTree = "<group>"; };
+		F906786E1C172144009B362E /* ZiZhiApplyVipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiApplyVipViewController.m; sourceTree = "<group>"; };
+		F90678701C172270009B362E /* ZiZhiHomeVipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiHomeVipViewController.h; sourceTree = "<group>"; };
+		F90678711C172270009B362E /* ZiZhiHomeVipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiHomeVipViewController.m; sourceTree = "<group>"; };
+		F90678731C172839009B362E /* ZiZhiProgramSignUpDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiProgramSignUpDetailViewController.h; sourceTree = "<group>"; };
+		F90678741C172839009B362E /* ZiZhiProgramSignUpDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiProgramSignUpDetailViewController.m; sourceTree = "<group>"; };
+		F90678771C172A07009B362E /* ZiZhiProgramSignUpTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiProgramSignUpTableViewCell.h; sourceTree = "<group>"; };
+		F90678781C172A07009B362E /* ZiZhiProgramSignUpTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiProgramSignUpTableViewCell.m; sourceTree = "<group>"; };
+		F9075B501C1E9F320018B0BF /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		F9075B511C1E9F320018B0BF /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		F9075B551C1EA0DB0018B0BF /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		F9075B561C1EA0DB0018B0BF /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		F9075B571C1EA0DB0018B0BF /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		F9075B581C1EA0DB0018B0BF /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		F9075B591C1EA0DB0018B0BF /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		F9075B5D1C1EA1620018B0BF /* ApiXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiXml.h; sourceTree = "<group>"; };
+		F9075B5E1C1EA1620018B0BF /* ApiXml.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ApiXml.mm; sourceTree = "<group>"; };
+		F9075B5F1C1EA1620018B0BF /* payRequsestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = payRequsestHandler.h; sourceTree = "<group>"; };
+		F9075B601C1EA1620018B0BF /* payRequsestHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = payRequsestHandler.mm; sourceTree = "<group>"; };
+		F9075B611C1EA1620018B0BF /* WXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXUtil.h; sourceTree = "<group>"; };
+		F9075B621C1EA1620018B0BF /* WXUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WXUtil.mm; sourceTree = "<group>"; };
+		F9075B661C1EA79E0018B0BF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F9075B681C1EA8E70018B0BF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		F9075B6A1C1EA9030018B0BF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F9075B701C1EAB460018B0BF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		F9075B721C1EAB5C0018B0BF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F9075B741C1EBF030018B0BF /* ZiZhiWeiXinPayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiWeiXinPayModel.h; sourceTree = "<group>"; };
+		F9075B751C1EBF030018B0BF /* ZiZhiWeiXinPayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiWeiXinPayModel.m; sourceTree = "<group>"; };
+		F9075B771C1ECA770018B0BF /* ZiZhiAfficheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiAfficheModel.h; sourceTree = "<group>"; };
+		F9075B781C1ECA770018B0BF /* ZiZhiAfficheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiAfficheModel.m; sourceTree = "<group>"; };
+		F92ABEDD1C19244100109CE5 /* ZiZhiOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiOrderModel.h; sourceTree = "<group>"; };
+		F92ABEDE1C19244100109CE5 /* ZiZhiOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiOrderModel.m; sourceTree = "<group>"; };
+		F92ABEE01C19250600109CE5 /* ZiZhiProgramModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiProgramModel.h; sourceTree = "<group>"; };
+		F92ABEE11C19250600109CE5 /* ZiZhiProgramModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiProgramModel.m; sourceTree = "<group>"; };
+		F92ABEE31C1925F900109CE5 /* ZiZhiProgramEnrollModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiProgramEnrollModel.h; sourceTree = "<group>"; };
+		F92ABEE41C1925F900109CE5 /* ZiZhiProgramEnrollModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiProgramEnrollModel.m; sourceTree = "<group>"; };
+		F92ABEE61C19269500109CE5 /* ZiZhiProgramUpdateRecordsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiProgramUpdateRecordsModel.h; sourceTree = "<group>"; };
+		F92ABEE71C19269500109CE5 /* ZiZhiProgramUpdateRecordsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiProgramUpdateRecordsModel.m; sourceTree = "<group>"; };
+		F92ABEE91C19271200109CE5 /* ZiZhiSqzpListItemResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiSqzpListItemResultModel.h; sourceTree = "<group>"; };
+		F92ABEEA1C19271200109CE5 /* ZiZhiSqzpListItemResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiSqzpListItemResultModel.m; sourceTree = "<group>"; };
+		F92ABEEC1C19278100109CE5 /* ZiZhiTicketApplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiTicketApplyModel.h; sourceTree = "<group>"; };
+		F92ABEED1C19278100109CE5 /* ZiZhiTicketApplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiTicketApplyModel.m; sourceTree = "<group>"; };
+		F945BD571C1E7340008905D2 /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
+		F945BD581C1E7340008905D2 /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
+		F945BD591C1E7340008905D2 /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
+		F97658061C16C1C500E48162 /* ZiZhiApplyTicketDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiApplyTicketDetailViewController.h; sourceTree = "<group>"; };
+		F97658071C16C1C500E48162 /* ZiZhiApplyTicketDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiApplyTicketDetailViewController.m; sourceTree = "<group>"; };
+		F976580B1C16C9E600E48162 /* ZiZhiHomeApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiHomeApplyViewController.h; sourceTree = "<group>"; };
+		F976580C1C16C9E600E48162 /* ZiZhiHomeApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiHomeApplyViewController.m; sourceTree = "<group>"; };
+		F976580E1C16CFDB00E48162 /* ZiZhiHomeProgramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiHomeProgramViewController.h; sourceTree = "<group>"; };
+		F976580F1C16CFDB00E48162 /* ZiZhiHomeProgramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiHomeProgramViewController.m; sourceTree = "<group>"; };
+		F97658111C16D00800E48162 /* ZiZhiProgramSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiProgramSignUpViewController.h; sourceTree = "<group>"; };
+		F97658121C16D00800E48162 /* ZiZhiProgramSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiProgramSignUpViewController.m; sourceTree = "<group>"; };
+		F97ECF7E1C1C642D00E2C6B9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F97ECF801C1C646100E2C6B9 /* map.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = map.html; sourceTree = "<group>"; };
+		F98A43A11C1D1EDD002E4D6A /* ZiZhiChooseTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiChooseTimeViewController.h; sourceTree = "<group>"; };
+		F98A43A21C1D1EDD002E4D6A /* ZiZhiChooseTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiChooseTimeViewController.m; sourceTree = "<group>"; };
+		F99069C61C1C376D00FDFE45 /* AdmobCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdmobCollectionViewCell.h; sourceTree = "<group>"; };
+		F99069C71C1C376D00FDFE45 /* AdmobCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdmobCollectionViewCell.m; sourceTree = "<group>"; };
+		F99069C81C1C376D00FDFE45 /* AdmobCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdmobCollectionViewCell.xib; sourceTree = "<group>"; };
+		F99069C91C1C376D00FDFE45 /* BRAdmobView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAdmobView.h; sourceTree = "<group>"; };
+		F99069CA1C1C376D00FDFE45 /* BRAdmobView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAdmobView.m; sourceTree = "<group>"; };
+		F993EBFC1C15C8B600EF3022 /* ZiZhiSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiSettingViewController.h; sourceTree = "<group>"; };
+		F993EBFD1C15C8B600EF3022 /* ZiZhiSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiSettingViewController.m; sourceTree = "<group>"; };
+		F998CEEB1C2028B700A81DBB /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
+		F998CEEC1C2028B700A81DBB /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
+		F998CEEE1C20521200A81DBB /* 首页.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "首页.jpg"; sourceTree = "<group>"; };
+		F9BD55F11C2408A70037B066 /* ZiZhiPayShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiPayShowViewController.h; sourceTree = "<group>"; };
+		F9BD55F21C2408A70037B066 /* ZiZhiPayShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiPayShowViewController.m; sourceTree = "<group>"; };
+		F9BD55F41C2413030037B066 /* ZiZhiPayViewValueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiPayViewValueModel.h; sourceTree = "<group>"; };
+		F9BD55F51C2413030037B066 /* ZiZhiPayViewValueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiPayViewValueModel.m; sourceTree = "<group>"; };
+		F9D0E3EB1C0AD6640012CAA4 /* 中视观众.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "中视观众.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9D0E3EF1C0AD6640012CAA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F9D0E3F11C0AD6640012CAA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F9D0E3F21C0AD6640012CAA4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F9D0E3FB1C0AD6640012CAA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9D0E3FD1C0AD6640012CAA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9D0E4001C0AD6640012CAA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9D0E4021C0AD6640012CAA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D0E4071C0AD6640012CAA4 /* ZiZhiGZWTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiZhiGZWTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9D0E40B1C0AD6640012CAA4 /* ZiZhiGZWTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZiZhiGZWTests.m; sourceTree = "<group>"; };
+		F9D0E40D1C0AD6640012CAA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D0E4121C0AD6640012CAA4 /* ZiZhiGZWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiZhiGZWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9D0E4161C0AD6640012CAA4 /* ZiZhiGZWUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZiZhiGZWUITests.m; sourceTree = "<group>"; };
+		F9D0E4181C0AD6640012CAA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E2376C1C0BFB56004F74B7 /* ZiZhiHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiHomeViewController.h; sourceTree = "<group>"; };
+		F9E2376D1C0BFB56004F74B7 /* ZiZhiHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiHomeViewController.m; sourceTree = "<group>"; };
+		F9E237701C0C0049004F74B7 /* HomeConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeConfig.h; sourceTree = "<group>"; };
+		F9E2F7DD1C1BFCC0007AC784 /* ZiZhiSettingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiSettingModel.h; sourceTree = "<group>"; };
+		F9E2F7DE1C1BFCC0007AC784 /* ZiZhiSettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiSettingModel.m; sourceTree = "<group>"; };
+		F9E472CC1C0C02BF0023DE60 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		F9E472CD1C0C02BF0023DE60 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		F9E477FA1C181CD9004DA412 /* ZiZhiUserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiUserCenterViewController.h; sourceTree = "<group>"; };
+		F9E477FB1C181CD9004DA412 /* ZiZhiUserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiUserCenterViewController.m; sourceTree = "<group>"; };
+		F9E477FE1C182688004DA412 /* ZiZhiMyTicketTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiMyTicketTableViewCell.h; sourceTree = "<group>"; };
+		F9E477FF1C182688004DA412 /* ZiZhiMyTicketTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiMyTicketTableViewCell.m; sourceTree = "<group>"; };
+		F9E478011C1826AC004DA412 /* ZiZhiMyVipTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiMyVipTableViewCell.h; sourceTree = "<group>"; };
+		F9E478021C1826AC004DA412 /* ZiZhiMyVipTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiMyVipTableViewCell.m; sourceTree = "<group>"; };
+		F9E478041C182F2F004DA412 /* ZiZhiMySignUpTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiMySignUpTableViewCell.h; sourceTree = "<group>"; };
+		F9E478051C182F2F004DA412 /* ZiZhiMySignUpTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiMySignUpTableViewCell.m; sourceTree = "<group>"; };
+		F9E478071C18301F004DA412 /* ZiZhiMyTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiMyTicketViewController.h; sourceTree = "<group>"; };
+		F9E478081C18301F004DA412 /* ZiZhiMyTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiMyTicketViewController.m; sourceTree = "<group>"; };
+		F9E4780A1C18302C004DA412 /* ZiZhiMyVipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiMyVipViewController.h; sourceTree = "<group>"; };
+		F9E4780B1C18302C004DA412 /* ZiZhiMyVipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiMyVipViewController.m; sourceTree = "<group>"; };
+		F9E4780D1C183053004DA412 /* ZiZhiMySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiMySignUpViewController.h; sourceTree = "<group>"; };
+		F9E4780E1C183053004DA412 /* ZiZhiMySignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiMySignUpViewController.m; sourceTree = "<group>"; };
+		F9E63C461C21252200972ED8 /* ZiZhiAdDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiAdDetailViewController.h; sourceTree = "<group>"; };
+		F9E63C471C21252200972ED8 /* ZiZhiAdDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiAdDetailViewController.m; sourceTree = "<group>"; };
+		F9E63C5A1C219DF200972ED8 /* APP1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = APP1.png; sourceTree = "<group>"; };
+		F9E63C5B1C219DF200972ED8 /* APP2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = APP2.png; sourceTree = "<group>"; };
+		F9E63C5C1C219DF200972ED8 /* APP3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = APP3.png; sourceTree = "<group>"; };
+		F9E63C601C21AAD000972ED8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F9E63C621C21AAE600972ED8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F9E6A3BC1C0ADCB200C3BABA /* CCLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLog.h; sourceTree = "<group>"; };
+		F9E6A3BD1C0ADCB200C3BABA /* MyConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyConfig.h; sourceTree = "<group>"; };
+		F9E6A3BE1C0ADCB200C3BABA /* NetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkConfig.h; sourceTree = "<group>"; };
+		F9E6A3BF1C0ADCF000C3BABA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F9E6A3C01C0ADD2B00C3BABA /* ZiZhiNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiNetworkManager.h; sourceTree = "<group>"; };
+		F9E6A3C11C0ADD2B00C3BABA /* ZiZhiNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiNetworkManager.m; sourceTree = "<group>"; };
+		F9E6A3C21C0ADD2B00C3BABA /* ZiZhiNetworkResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiNetworkResponseModel.h; sourceTree = "<group>"; };
+		F9E6A3C31C0ADD2B00C3BABA /* ZiZhiNetworkResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiNetworkResponseModel.m; sourceTree = "<group>"; };
+		F9E6A3C71C0ADFC200C3BABA /* qq_baoming_zixun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq_baoming_zixun.png; sourceTree = "<group>"; };
+		F9E6A3C81C0ADFC200C3BABA /* qq_divider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq_divider.png; sourceTree = "<group>"; };
+		F9E6A3C91C0ADFC200C3BABA /* qq_hezuo_zixun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq_hezuo_zixun.png; sourceTree = "<group>"; };
+		F9E6A3CA1C0ADFC200C3BABA /* qq_thrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq_thrid.png; sourceTree = "<group>"; };
+		F9E6A3CB1C0ADFC200C3BABA /* qq_time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq_time.png; sourceTree = "<group>"; };
+		F9E6A3CD1C0ADFC200C3BABA /* qq_zuixin_zixun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq_zuixin_zixun.png; sourceTree = "<group>"; };
+		F9E6A3D51C0AE29C00C3BABA /* qq_zengpiao_zixun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq_zengpiao_zixun.png; sourceTree = "<group>"; };
+		F9E6A3D71C0B38ED00C3BABA /* ZiZhiServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiServiceViewController.h; sourceTree = "<group>"; };
+		F9E6A3D81C0B38ED00C3BABA /* ZiZhiServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiServiceViewController.m; sourceTree = "<group>"; };
+		F9E6BB3F1C1AB99A0093AEEF /* ZiZhiTicketDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiTicketDetailModel.h; sourceTree = "<group>"; };
+		F9E6BB401C1AB99A0093AEEF /* ZiZhiTicketDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiTicketDetailModel.m; sourceTree = "<group>"; };
+		F9E6BB421C1ABE720093AEEF /* ZiZhiVipDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiVipDetailModel.h; sourceTree = "<group>"; };
+		F9E6BB431C1ABE720093AEEF /* ZiZhiVipDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiVipDetailModel.m; sourceTree = "<group>"; };
+		F9E6BB451C1ABFCF0093AEEF /* ZiZhiProgramListItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiProgramListItemModel.h; sourceTree = "<group>"; };
+		F9E6BB461C1ABFCF0093AEEF /* ZiZhiProgramListItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiProgramListItemModel.m; sourceTree = "<group>"; };
+		F9E6BB481C1AD73A0093AEEF /* ZiZhiProgramDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiProgramDetailModel.h; sourceTree = "<group>"; };
+		F9E6BB491C1AD73A0093AEEF /* ZiZhiProgramDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiProgramDetailModel.m; sourceTree = "<group>"; };
+		F9E6BB4B1C1AF51A0093AEEF /* ZiZhiUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiUserInfoModel.h; sourceTree = "<group>"; };
+		F9E6BB4C1C1AF51A0093AEEF /* ZiZhiUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiUserInfoModel.m; sourceTree = "<group>"; };
+		F9E6BB4E1C1AF5300093AEEF /* ZiZhiUserInfoLocalHelperModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiUserInfoLocalHelperModel.h; sourceTree = "<group>"; };
+		F9E6BB4F1C1AF5300093AEEF /* ZiZhiUserInfoLocalHelperModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiUserInfoLocalHelperModel.m; sourceTree = "<group>"; };
+		F9E6BB511C1AF6040093AEEF /* UserCenterConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserCenterConfig.h; sourceTree = "<group>"; };
+		F9EBAEAE1C19CC57005EFB34 /* ZiZhiADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiADViewController.h; sourceTree = "<group>"; };
+		F9EBAEAF1C19CC57005EFB34 /* ZiZhiADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiADViewController.m; sourceTree = "<group>"; };
+		F9EBAEB11C19CD47005EFB34 /* ZiZhiADModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiADModel.h; sourceTree = "<group>"; };
+		F9EBAEB21C19CD47005EFB34 /* ZiZhiADModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiADModel.m; sourceTree = "<group>"; };
+		F9EBAEB41C19DD77005EFB34 /* ZiZhiLocalHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiLocalHelper.h; sourceTree = "<group>"; };
+		F9EBAEB51C19DD77005EFB34 /* ZiZhiLocalHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiLocalHelper.m; sourceTree = "<group>"; };
+		F9EBAEB71C19E4E4005EFB34 /* ZiZhiRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiRootViewController.h; sourceTree = "<group>"; };
+		F9EBAEB81C19E4E4005EFB34 /* ZiZhiRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiRootViewController.m; sourceTree = "<group>"; };
+		F9ED96BB1C0E9A110092C5EE /* no_img_tip.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = no_img_tip.jpg; sourceTree = "<group>"; };
+		F9ED96C01C0EA2FA0092C5EE /* ZiZhiApplyTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiApplyTicketViewController.h; sourceTree = "<group>"; };
+		F9ED96C11C0EA2FA0092C5EE /* ZiZhiApplyTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiApplyTicketViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9D0E3E81C0AD6640012CAA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E63C631C21AAE600972ED8 /* SystemConfiguration.framework in Frameworks */,
+				F9E63C611C21AAD000972ED8 /* Foundation.framework in Frameworks */,
+				F9075B731C1EAB5C0018B0BF /* libz.tbd in Frameworks */,
+				F9075B711C1EAB460018B0BF /* libc++.tbd in Frameworks */,
+				F9075B6D1C1EA9F90018B0BF /* libWeChatSDK.a in Frameworks */,
+				F9075B6C1C1EA9840018B0BF /* libsqlite3.0.tbd in Frameworks */,
+				F9075B6B1C1EA9030018B0BF /* libsqlite3.tbd in Frameworks */,
+				F945BD5A1C1E7340008905D2 /* libBPush.a in Frameworks */,
+				F9075B671C1EA79E0018B0BF /* CoreTelephony.framework in Frameworks */,
+				F97ECF7F1C1C642D00E2C6B9 /* CoreLocation.framework in Frameworks */,
+				F9075B531C1E9F320018B0BF /* AlipaySDK.framework in Frameworks */,
+				AB72A899EA45E1521798BBA3 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9D0E4041C0AD6640012CAA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9D0E40F1C0AD6640012CAA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39333CDDFB89A25BFBC0E0E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20C44FD010121F4D3F3CCE57 /* Pods.debug.xcconfig */,
+				51C0B30B304E24210AA795F1 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D402C3ED71793C2F5812BFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9E63C621C21AAE600972ED8 /* SystemConfiguration.framework */,
+				F9E63C601C21AAD000972ED8 /* Foundation.framework */,
+				F9075B721C1EAB5C0018B0BF /* libz.tbd */,
+				F9075B701C1EAB460018B0BF /* libc++.tbd */,
+				F9075B6A1C1EA9030018B0BF /* libsqlite3.tbd */,
+				F9075B681C1EA8E70018B0BF /* libsqlite3.0.tbd */,
+				F9075B661C1EA79E0018B0BF /* CoreTelephony.framework */,
+				F97ECF7E1C1C642D00E2C6B9 /* CoreLocation.framework */,
+				382FE5F2B67AE3133E103F47 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9049C591C1A84A9006206D9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F9EBAEAE1C19CC57005EFB34 /* ZiZhiADViewController.h */,
+				F9EBAEAF1C19CC57005EFB34 /* ZiZhiADViewController.m */,
+				F9049C5A1C1A84BF006206D9 /* ZiZhiWebViewController.h */,
+				F9049C5B1C1A84BF006206D9 /* ZiZhiWebViewController.m */,
+				F9E63C461C21252200972ED8 /* ZiZhiAdDetailViewController.h */,
+				F9E63C471C21252200972ED8 /* ZiZhiAdDetailViewController.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		F90678761C1729D5009B362E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F90678771C172A07009B362E /* ZiZhiProgramSignUpTableViewCell.h */,
+				F90678781C172A07009B362E /* ZiZhiProgramSignUpTableViewCell.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		F9075B541C1EA0DB0018B0BF /* SDK1.6.2 */ = {
+			isa = PBXGroup;
+			children = (
+				F9075B551C1EA0DB0018B0BF /* libWeChatSDK.a */,
+				F9075B561C1EA0DB0018B0BF /* read_me.txt */,
+				F9075B571C1EA0DB0018B0BF /* WechatAuthSDK.h */,
+				F9075B581C1EA0DB0018B0BF /* WXApi.h */,
+				F9075B591C1EA0DB0018B0BF /* WXApiObject.h */,
+			);
+			path = SDK1.6.2;
+			sourceTree = "<group>";
+		};
+		F9075B5C1C1EA1620018B0BF /* weixinUtil */ = {
+			isa = PBXGroup;
+			children = (
+				F998CEEB1C2028B700A81DBB /* WXApiManager.h */,
+				F998CEEC1C2028B700A81DBB /* WXApiManager.m */,
+				F9075B5D1C1EA1620018B0BF /* ApiXml.h */,
+				F9075B5E1C1EA1620018B0BF /* ApiXml.mm */,
+				F9075B5F1C1EA1620018B0BF /* payRequsestHandler.h */,
+				F9075B601C1EA1620018B0BF /* payRequsestHandler.mm */,
+				F9075B611C1EA1620018B0BF /* WXUtil.h */,
+				F9075B621C1EA1620018B0BF /* WXUtil.mm */,
+			);
+			path = weixinUtil;
+			sourceTree = "<group>";
+		};
+		F92ABEDA1C1923C400109CE5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F9EBAEB11C19CD47005EFB34 /* ZiZhiADModel.h */,
+				F9EBAEB21C19CD47005EFB34 /* ZiZhiADModel.m */,
+				F9049C5D1C1A9398006206D9 /* ZiZhiBannerItemModel.h */,
+				F9049C5E1C1A9398006206D9 /* ZiZhiBannerItemModel.m */,
+				F9049C601C1AAE02006206D9 /* ZiZhiMainalModel.h */,
+				F9049C611C1AAE02006206D9 /* ZiZhiMainalModel.m */,
+				F9E6BB3F1C1AB99A0093AEEF /* ZiZhiTicketDetailModel.h */,
+				F9E6BB401C1AB99A0093AEEF /* ZiZhiTicketDetailModel.m */,
+				F9E6BB421C1ABE720093AEEF /* ZiZhiVipDetailModel.h */,
+				F9E6BB431C1ABE720093AEEF /* ZiZhiVipDetailModel.m */,
+				F9E6BB451C1ABFCF0093AEEF /* ZiZhiProgramListItemModel.h */,
+				F9E6BB461C1ABFCF0093AEEF /* ZiZhiProgramListItemModel.m */,
+				F9E6BB481C1AD73A0093AEEF /* ZiZhiProgramDetailModel.h */,
+				F9E6BB491C1AD73A0093AEEF /* ZiZhiProgramDetailModel.m */,
+				F9075B741C1EBF030018B0BF /* ZiZhiWeiXinPayModel.h */,
+				F9075B751C1EBF030018B0BF /* ZiZhiWeiXinPayModel.m */,
+				F9075B771C1ECA770018B0BF /* ZiZhiAfficheModel.h */,
+				F9075B781C1ECA770018B0BF /* ZiZhiAfficheModel.m */,
+				F9BD55F41C2413030037B066 /* ZiZhiPayViewValueModel.h */,
+				F9BD55F51C2413030037B066 /* ZiZhiPayViewValueModel.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		F92ABEDB1C1923CC00109CE5 /* UserCenter */ = {
+			isa = PBXGroup;
+			children = (
+				F9E6BB4B1C1AF51A0093AEEF /* ZiZhiUserInfoModel.h */,
+				F9E6BB4C1C1AF51A0093AEEF /* ZiZhiUserInfoModel.m */,
+				F9E6BB4E1C1AF5300093AEEF /* ZiZhiUserInfoLocalHelperModel.h */,
+				F9E6BB4F1C1AF5300093AEEF /* ZiZhiUserInfoLocalHelperModel.m */,
+				F92ABEE31C1925F900109CE5 /* ZiZhiProgramEnrollModel.h */,
+				F92ABEE41C1925F900109CE5 /* ZiZhiProgramEnrollModel.m */,
+				F92ABEDD1C19244100109CE5 /* ZiZhiOrderModel.h */,
+				F92ABEDE1C19244100109CE5 /* ZiZhiOrderModel.m */,
+				F92ABEEC1C19278100109CE5 /* ZiZhiTicketApplyModel.h */,
+				F92ABEED1C19278100109CE5 /* ZiZhiTicketApplyModel.m */,
+			);
+			name = UserCenter;
+			sourceTree = "<group>";
+		};
+		F945BD561C1E7340008905D2 /* LibBPush */ = {
+			isa = PBXGroup;
+			children = (
+				F945BD571C1E7340008905D2 /* BPush.h */,
+				F945BD581C1E7340008905D2 /* libBPush.a */,
+				F945BD591C1E7340008905D2 /* test.caf */,
+			);
+			path = LibBPush;
+			sourceTree = "<group>";
+		};
+		F97658091C16C61400E48162 /* Apply */ = {
+			isa = PBXGroup;
+			children = (
+				F9ED96C01C0EA2FA0092C5EE /* ZiZhiApplyTicketViewController.h */,
+				F9ED96C11C0EA2FA0092C5EE /* ZiZhiApplyTicketViewController.m */,
+				F97658061C16C1C500E48162 /* ZiZhiApplyTicketDetailViewController.h */,
+				F97658071C16C1C500E48162 /* ZiZhiApplyTicketDetailViewController.m */,
+				F906786D1C172144009B362E /* ZiZhiApplyVipViewController.h */,
+				F906786E1C172144009B362E /* ZiZhiApplyVipViewController.m */,
+				F976580B1C16C9E600E48162 /* ZiZhiHomeApplyViewController.h */,
+				F976580C1C16C9E600E48162 /* ZiZhiHomeApplyViewController.m */,
+				F90678701C172270009B362E /* ZiZhiHomeVipViewController.h */,
+				F90678711C172270009B362E /* ZiZhiHomeVipViewController.m */,
+			);
+			name = Apply;
+			sourceTree = "<group>";
+		};
+		F976580A1C16C63400E48162 /* Program */ = {
+			isa = PBXGroup;
+			children = (
+				F901807C1C16B43200E1F54C /* ZiZhiNavigationViewController.h */,
+				F901807D1C16B43200E1F54C /* ZiZhiNavigationViewController.m */,
+				F97658111C16D00800E48162 /* ZiZhiProgramSignUpViewController.h */,
+				F97658121C16D00800E48162 /* ZiZhiProgramSignUpViewController.m */,
+				F90678731C172839009B362E /* ZiZhiProgramSignUpDetailViewController.h */,
+				F90678741C172839009B362E /* ZiZhiProgramSignUpDetailViewController.m */,
+				F976580E1C16CFDB00E48162 /* ZiZhiHomeProgramViewController.h */,
+				F976580F1C16CFDB00E48162 /* ZiZhiHomeProgramViewController.m */,
+				F98A43A11C1D1EDD002E4D6A /* ZiZhiChooseTimeViewController.h */,
+				F98A43A21C1D1EDD002E4D6A /* ZiZhiChooseTimeViewController.m */,
+			);
+			name = Program;
+			sourceTree = "<group>";
+		};
+		F99069C51C1C376D00FDFE45 /* BRAdmob */ = {
+			isa = PBXGroup;
+			children = (
+				F99069C61C1C376D00FDFE45 /* AdmobCollectionViewCell.h */,
+				F99069C71C1C376D00FDFE45 /* AdmobCollectionViewCell.m */,
+				F99069C81C1C376D00FDFE45 /* AdmobCollectionViewCell.xib */,
+				F99069C91C1C376D00FDFE45 /* BRAdmobView.h */,
+				F99069CA1C1C376D00FDFE45 /* BRAdmobView.m */,
+			);
+			path = BRAdmob;
+			sourceTree = "<group>";
+		};
+		F9D0E3E21C0AD6640012CAA4 = {
+			isa = PBXGroup;
+			children = (
+				F9D0E3ED1C0AD6640012CAA4 /* ZiZhiGZW */,
+				F9D0E40A1C0AD6640012CAA4 /* ZiZhiGZWTests */,
+				F9D0E4151C0AD6640012CAA4 /* ZiZhiGZWUITests */,
+				F9D0E3EC1C0AD6640012CAA4 /* Products */,
+				39333CDDFB89A25BFBC0E0E4 /* Pods */,
+				9D402C3ED71793C2F5812BFA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F9D0E3EC1C0AD6640012CAA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9D0E3EB1C0AD6640012CAA4 /* 中视观众.app */,
+				F9D0E4071C0AD6640012CAA4 /* ZiZhiGZWTests.xctest */,
+				F9D0E4121C0AD6640012CAA4 /* ZiZhiGZWUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9D0E3ED1C0AD6640012CAA4 /* ZiZhiGZW */ = {
+			isa = PBXGroup;
+			children = (
+				F9E472CB1C0C025F0023DE60 /* Utils */,
+				F9E6A3B61C0ADC7E00C3BABA /* Config */,
+				F9E6A3B71C0ADC7E00C3BABA /* Controller */,
+				F9E6A3B81C0ADC7E00C3BABA /* Model */,
+				F9E6A3B91C0ADC7E00C3BABA /* Resource */,
+				F9E6A3BA1C0ADC7E00C3BABA /* View */,
+				F9D0E3FA1C0AD6640012CAA4 /* Main.storyboard */,
+				F9D0E3FD1C0AD6640012CAA4 /* Assets.xcassets */,
+				F9D0E3FF1C0AD6640012CAA4 /* LaunchScreen.storyboard */,
+				F9D0E3EE1C0AD6640012CAA4 /* Supporting Files */,
+			);
+			path = ZiZhiGZW;
+			sourceTree = "<group>";
+		};
+		F9D0E3EE1C0AD6640012CAA4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9D0E3F11C0AD6640012CAA4 /* AppDelegate.h */,
+				F9D0E3F21C0AD6640012CAA4 /* AppDelegate.m */,
+				F9D0E4021C0AD6640012CAA4 /* Info.plist */,
+				F9D0E3EF1C0AD6640012CAA4 /* main.m */,
+				F9E6A3BF1C0ADCF000C3BABA /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9D0E40A1C0AD6640012CAA4 /* ZiZhiGZWTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9D0E40B1C0AD6640012CAA4 /* ZiZhiGZWTests.m */,
+				F9D0E40D1C0AD6640012CAA4 /* Info.plist */,
+			);
+			path = ZiZhiGZWTests;
+			sourceTree = "<group>";
+		};
+		F9D0E4151C0AD6640012CAA4 /* ZiZhiGZWUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9D0E4161C0AD6640012CAA4 /* ZiZhiGZWUITests.m */,
+				F9D0E4181C0AD6640012CAA4 /* Info.plist */,
+			);
+			path = ZiZhiGZWUITests;
+			sourceTree = "<group>";
+		};
+		F9E237671C0BFAA2004F74B7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F9E6A3D71C0B38ED00C3BABA /* ZiZhiServiceViewController.h */,
+				F9E6A3D81C0B38ED00C3BABA /* ZiZhiServiceViewController.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		F9E237681C0BFAB8004F74B7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F976580A1C16C63400E48162 /* Program */,
+				F97658091C16C61400E48162 /* Apply */,
+				F9E2376C1C0BFB56004F74B7 /* ZiZhiHomeViewController.h */,
+				F9E2376D1C0BFB56004F74B7 /* ZiZhiHomeViewController.m */,
+				F9BD55F11C2408A70037B066 /* ZiZhiPayShowViewController.h */,
+				F9BD55F21C2408A70037B066 /* ZiZhiPayShowViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		F9E237691C0BFAC6004F74B7 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Connection;
+			sourceTree = "<group>";
+		};
+		F9E2376A1C0BFAFA004F74B7 /* UserCenter */ = {
+			isa = PBXGroup;
+			children = (
+				F9E477FA1C181CD9004DA412 /* ZiZhiUserCenterViewController.h */,
+				F9E477FB1C181CD9004DA412 /* ZiZhiUserCenterViewController.m */,
+				F9E478071C18301F004DA412 /* ZiZhiMyTicketViewController.h */,
+				F9E478081C18301F004DA412 /* ZiZhiMyTicketViewController.m */,
+				F9E4780A1C18302C004DA412 /* ZiZhiMyVipViewController.h */,
+				F9E4780B1C18302C004DA412 /* ZiZhiMyVipViewController.m */,
+				F9E4780D1C183053004DA412 /* ZiZhiMySignUpViewController.h */,
+				F9E4780E1C183053004DA412 /* ZiZhiMySignUpViewController.m */,
+			);
+			name = UserCenter;
+			sourceTree = "<group>";
+		};
+		F9E2376B1C0BFB25004F74B7 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F993EBFC1C15C8B600EF3022 /* ZiZhiSettingViewController.h */,
+				F993EBFD1C15C8B600EF3022 /* ZiZhiSettingViewController.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		F9E2376F1C0C0037004F74B7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F9E237701C0C0049004F74B7 /* HomeConfig.h */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		F9E2F7DC1C1BFB22007AC784 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2F7DD1C1BFCC0007AC784 /* ZiZhiSettingModel.h */,
+				F9E2F7DE1C1BFCC0007AC784 /* ZiZhiSettingModel.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		F9E472CB1C0C025F0023DE60 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F9E472CC1C0C02BF0023DE60 /* Utils.h */,
+				F9E472CD1C0C02BF0023DE60 /* Utils.m */,
+				F9EBAEB41C19DD77005EFB34 /* ZiZhiLocalHelper.h */,
+				F9EBAEB51C19DD77005EFB34 /* ZiZhiLocalHelper.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F9E477FD1C18265F004DA412 /* UserCenter */ = {
+			isa = PBXGroup;
+			children = (
+				F9E477FE1C182688004DA412 /* ZiZhiMyTicketTableViewCell.h */,
+				F9E477FF1C182688004DA412 /* ZiZhiMyTicketTableViewCell.m */,
+				F9E478011C1826AC004DA412 /* ZiZhiMyVipTableViewCell.h */,
+				F9E478021C1826AC004DA412 /* ZiZhiMyVipTableViewCell.m */,
+				F9E478041C182F2F004DA412 /* ZiZhiMySignUpTableViewCell.h */,
+				F9E478051C182F2F004DA412 /* ZiZhiMySignUpTableViewCell.m */,
+			);
+			name = UserCenter;
+			sourceTree = "<group>";
+		};
+		F9E6A3B61C0ADC7E00C3BABA /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2376F1C0C0037004F74B7 /* Home */,
+				F9E6A3BC1C0ADCB200C3BABA /* CCLog.h */,
+				F9E6A3BD1C0ADCB200C3BABA /* MyConfig.h */,
+				F9E6A3BE1C0ADCB200C3BABA /* NetworkConfig.h */,
+				F9E6BB511C1AF6040093AEEF /* UserCenterConfig.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F9E6A3B71C0ADC7E00C3BABA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F9049C591C1A84A9006206D9 /* Other */,
+				F9E2376B1C0BFB25004F74B7 /* Setting */,
+				F9E2376A1C0BFAFA004F74B7 /* UserCenter */,
+				F9E237691C0BFAC6004F74B7 /* Connection */,
+				F9E237681C0BFAB8004F74B7 /* Home */,
+				F9E237671C0BFAA2004F74B7 /* Service */,
+				F9EBAEB71C19E4E4005EFB34 /* ZiZhiRootViewController.h */,
+				F9EBAEB81C19E4E4005EFB34 /* ZiZhiRootViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F9E6A3B81C0ADC7E00C3BABA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2F7DC1C1BFB22007AC784 /* Setting */,
+				F92ABEDB1C1923CC00109CE5 /* UserCenter */,
+				F92ABEDA1C1923C400109CE5 /* Home */,
+				F9E6A3BB1C0ADC8400C3BABA /* Network */,
+				F92ABEE01C19250600109CE5 /* ZiZhiProgramModel.h */,
+				F92ABEE11C19250600109CE5 /* ZiZhiProgramModel.m */,
+				F92ABEE61C19269500109CE5 /* ZiZhiProgramUpdateRecordsModel.h */,
+				F92ABEE71C19269500109CE5 /* ZiZhiProgramUpdateRecordsModel.m */,
+				F92ABEE91C19271200109CE5 /* ZiZhiSqzpListItemResultModel.h */,
+				F92ABEEA1C19271200109CE5 /* ZiZhiSqzpListItemResultModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9E6A3B91C0ADC7E00C3BABA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F9E63C5A1C219DF200972ED8 /* APP1.png */,
+				F9E63C5B1C219DF200972ED8 /* APP2.png */,
+				F9E63C5C1C219DF200972ED8 /* APP3.png */,
+				F998CEEE1C20521200A81DBB /* 首页.jpg */,
+				F9075B5C1C1EA1620018B0BF /* weixinUtil */,
+				F9075B541C1EA0DB0018B0BF /* SDK1.6.2 */,
+				F9075B501C1E9F320018B0BF /* AlipaySDK.bundle */,
+				F9075B511C1E9F320018B0BF /* AlipaySDK.framework */,
+				F945BD561C1E7340008905D2 /* LibBPush */,
+				F97ECF801C1C646100E2C6B9 /* map.html */,
+				F99069C51C1C376D00FDFE45 /* BRAdmob */,
+				F9E6A3C61C0ADFC200C3BABA /* Images */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F9E6A3BA1C0ADC7E00C3BABA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9E477FD1C18265F004DA412 /* UserCenter */,
+				F90678761C1729D5009B362E /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9E6A3BB1C0ADC8400C3BABA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F9E6A3C01C0ADD2B00C3BABA /* ZiZhiNetworkManager.h */,
+				F9E6A3C11C0ADD2B00C3BABA /* ZiZhiNetworkManager.m */,
+				F9E6A3C21C0ADD2B00C3BABA /* ZiZhiNetworkResponseModel.h */,
+				F9E6A3C31C0ADD2B00C3BABA /* ZiZhiNetworkResponseModel.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		F9E6A3C61C0ADFC200C3BABA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F9ED96BB1C0E9A110092C5EE /* no_img_tip.jpg */,
+				F9E6A3C71C0ADFC200C3BABA /* qq_baoming_zixun.png */,
+				F9E6A3C81C0ADFC200C3BABA /* qq_divider.png */,
+				F9E6A3C91C0ADFC200C3BABA /* qq_hezuo_zixun.png */,
+				F9E6A3D51C0AE29C00C3BABA /* qq_zengpiao_zixun.png */,
+				F9E6A3CA1C0ADFC200C3BABA /* qq_thrid.png */,
+				F9E6A3CB1C0ADFC200C3BABA /* qq_time.png */,
+				F9E6A3CD1C0ADFC200C3BABA /* qq_zuixin_zixun.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9D0E3EA1C0AD6640012CAA4 /* ZiZhiGZW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9D0E41B1C0AD6640012CAA4 /* Build configuration list for PBXNativeTarget "ZiZhiGZW" */;
+			buildPhases = (
+				05914E7FBE81E3AE65DACDC6 /* Check Pods Manifest.lock */,
+				F9D0E3E71C0AD6640012CAA4 /* Sources */,
+				F9D0E3E81C0AD6640012CAA4 /* Frameworks */,
+				F9D0E3E91C0AD6640012CAA4 /* Resources */,
+				09572B2C4C110575604E3B72 /* Embed Pods Frameworks */,
+				E443A3BB058A4452E8738EE1 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZiZhiGZW;
+			productName = ZiZhiGZW;
+			productReference = F9D0E3EB1C0AD6640012CAA4 /* 中视观众.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9D0E4061C0AD6640012CAA4 /* ZiZhiGZWTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9D0E41E1C0AD6640012CAA4 /* Build configuration list for PBXNativeTarget "ZiZhiGZWTests" */;
+			buildPhases = (
+				F9D0E4031C0AD6640012CAA4 /* Sources */,
+				F9D0E4041C0AD6640012CAA4 /* Frameworks */,
+				F9D0E4051C0AD6640012CAA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9D0E4091C0AD6640012CAA4 /* PBXTargetDependency */,
+			);
+			name = ZiZhiGZWTests;
+			productName = ZiZhiGZWTests;
+			productReference = F9D0E4071C0AD6640012CAA4 /* ZiZhiGZWTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9D0E4111C0AD6640012CAA4 /* ZiZhiGZWUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9D0E4211C0AD6640012CAA4 /* Build configuration list for PBXNativeTarget "ZiZhiGZWUITests" */;
+			buildPhases = (
+				F9D0E40E1C0AD6640012CAA4 /* Sources */,
+				F9D0E40F1C0AD6640012CAA4 /* Frameworks */,
+				F9D0E4101C0AD6640012CAA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9D0E4141C0AD6640012CAA4 /* PBXTargetDependency */,
+			);
+			name = ZiZhiGZWUITests;
+			productName = ZiZhiGZWUITests;
+			productReference = F9D0E4121C0AD6640012CAA4 /* ZiZhiGZWUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9D0E3E31C0AD6640012CAA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZiZhi;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = zizhi;
+				TargetAttributes = {
+					F9D0E3EA1C0AD6640012CAA4 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 3Y5AU78FS9;
+					};
+					F9D0E4061C0AD6640012CAA4 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = F9D0E3EA1C0AD6640012CAA4;
+					};
+					F9D0E4111C0AD6640012CAA4 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = F9D0E3EA1C0AD6640012CAA4;
+					};
+				};
+			};
+			buildConfigurationList = F9D0E3E61C0AD6640012CAA4 /* Build configuration list for PBXProject "ZiZhiGZW" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9D0E3E21C0AD6640012CAA4;
+			productRefGroup = F9D0E3EC1C0AD6640012CAA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9D0E3EA1C0AD6640012CAA4 /* ZiZhiGZW */,
+				F9D0E4061C0AD6640012CAA4 /* ZiZhiGZWTests */,
+				F9D0E4111C0AD6640012CAA4 /* ZiZhiGZWUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9D0E3E91C0AD6640012CAA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9075B521C1E9F320018B0BF /* AlipaySDK.bundle in Resources */,
+				F9E63C5F1C219DF200972ED8 /* APP3.png in Resources */,
+				F945BD5B1C1E7340008905D2 /* test.caf in Resources */,
+				F9E63C5D1C219DF200972ED8 /* APP1.png in Resources */,
+				F9E63C5E1C219DF200972ED8 /* APP2.png in Resources */,
+				F97ECF811C1C646100E2C6B9 /* map.html in Resources */,
+				F9ED96BC1C0E9A110092C5EE /* no_img_tip.jpg in Resources */,
+				F9D0E4011C0AD6640012CAA4 /* LaunchScreen.storyboard in Resources */,
+				F9D0E3FE1C0AD6640012CAA4 /* Assets.xcassets in Resources */,
+				F9075B5B1C1EA0DB0018B0BF /* read_me.txt in Resources */,
+				F9E6A3D01C0ADFC200C3BABA /* qq_hezuo_zixun.png in Resources */,
+				F9E6A3D11C0ADFC200C3BABA /* qq_thrid.png in Resources */,
+				F9E6A3CE1C0ADFC200C3BABA /* qq_baoming_zixun.png in Resources */,
+				F9E6A3D41C0ADFC200C3BABA /* qq_zuixin_zixun.png in Resources */,
+				F9D0E3FC1C0AD6640012CAA4 /* Main.storyboard in Resources */,
+				F9E6A3D61C0AE29C00C3BABA /* qq_zengpiao_zixun.png in Resources */,
+				F9E6A3D21C0ADFC200C3BABA /* qq_time.png in Resources */,
+				F998CEEF1C20521200A81DBB /* 首页.jpg in Resources */,
+				F99069CC1C1C376D00FDFE45 /* AdmobCollectionViewCell.xib in Resources */,
+				F9E6A3CF1C0ADFC200C3BABA /* qq_divider.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9D0E4051C0AD6640012CAA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9D0E4101C0AD6640012CAA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05914E7FBE81E3AE65DACDC6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		09572B2C4C110575604E3B72 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E443A3BB058A4452E8738EE1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9D0E3E71C0AD6640012CAA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E4780C1C18302C004DA412 /* ZiZhiMyVipViewController.m in Sources */,
+				F9075B641C1EA1620018B0BF /* payRequsestHandler.mm in Sources */,
+				F9EBAEB91C19E4E4005EFB34 /* ZiZhiRootViewController.m in Sources */,
+				F9075B791C1ECA770018B0BF /* ZiZhiAfficheModel.m in Sources */,
+				F9E6BB4A1C1AD73A0093AEEF /* ZiZhiProgramDetailModel.m in Sources */,
+				F9D0E3F31C0AD6640012CAA4 /* AppDelegate.m in Sources */,
+				F9E478031C1826AC004DA412 /* ZiZhiMyVipTableViewCell.m in Sources */,
+				F97658101C16CFDB00E48162 /* ZiZhiHomeProgramViewController.m in Sources */,
+				F9EBAEB01C19CC57005EFB34 /* ZiZhiADViewController.m in Sources */,
+				F92ABEDF1C19244100109CE5 /* ZiZhiOrderModel.m in Sources */,
+				F9E6A3D91C0B38ED00C3BABA /* ZiZhiServiceViewController.m in Sources */,
+				F92ABEEE1C19278100109CE5 /* ZiZhiTicketApplyModel.m in Sources */,
+				F9E478091C18301F004DA412 /* ZiZhiMyTicketViewController.m in Sources */,
+				F9BD55F31C2408A70037B066 /* ZiZhiPayShowViewController.m in Sources */,
+				F9E63C481C21252200972ED8 /* ZiZhiAdDetailViewController.m in Sources */,
+				F97658081C16C1C500E48162 /* ZiZhiApplyTicketDetailViewController.m in Sources */,
+				F9D0E3F01C0AD6640012CAA4 /* main.m in Sources */,
+				F9E6A3C51C0ADD2B00C3BABA /* ZiZhiNetworkResponseModel.m in Sources */,
+				F99069CB1C1C376D00FDFE45 /* AdmobCollectionViewCell.m in Sources */,
+				F901807E1C16B43200E1F54C /* ZiZhiNavigationViewController.m in Sources */,
+				F9075B651C1EA1620018B0BF /* WXUtil.mm in Sources */,
+				F9ED96C21C0EA2FA0092C5EE /* ZiZhiApplyTicketViewController.m in Sources */,
+				F9E6BB471C1ABFCF0093AEEF /* ZiZhiProgramListItemModel.m in Sources */,
+				F998CEED1C2028B700A81DBB /* WXApiManager.m in Sources */,
+				F9E478001C182688004DA412 /* ZiZhiMyTicketTableViewCell.m in Sources */,
+				F9049C621C1AAE02006206D9 /* ZiZhiMainalModel.m in Sources */,
+				F9E6BB501C1AF5300093AEEF /* ZiZhiUserInfoLocalHelperModel.m in Sources */,
+				F9BD55F61C2413030037B066 /* ZiZhiPayViewValueModel.m in Sources */,
+				F92ABEE81C19269500109CE5 /* ZiZhiProgramUpdateRecordsModel.m in Sources */,
+				F9E6BB441C1ABE720093AEEF /* ZiZhiVipDetailModel.m in Sources */,
+				F99069CD1C1C376D00FDFE45 /* BRAdmobView.m in Sources */,
+				F92ABEEB1C19271200109CE5 /* ZiZhiSqzpListItemResultModel.m in Sources */,
+				F9049C5F1C1A9398006206D9 /* ZiZhiBannerItemModel.m in Sources */,
+				F9075B631C1EA1620018B0BF /* ApiXml.mm in Sources */,
+				F90678721C172270009B362E /* ZiZhiHomeVipViewController.m in Sources */,
+				F976580D1C16C9E600E48162 /* ZiZhiHomeApplyViewController.m in Sources */,
+				F9049C5C1C1A84BF006206D9 /* ZiZhiWebViewController.m in Sources */,
+				F9E4780F1C183053004DA412 /* ZiZhiMySignUpViewController.m in Sources */,
+				F9E2376E1C0BFB56004F74B7 /* ZiZhiHomeViewController.m in Sources */,
+				F9E478061C182F2F004DA412 /* ZiZhiMySignUpTableViewCell.m in Sources */,
+				F9EBAEB31C19CD47005EFB34 /* ZiZhiADModel.m in Sources */,
+				F9E6BB4D1C1AF51A0093AEEF /* ZiZhiUserInfoModel.m in Sources */,
+				F97658131C16D00800E48162 /* ZiZhiProgramSignUpViewController.m in Sources */,
+				F993EBFE1C15C8B600EF3022 /* ZiZhiSettingViewController.m in Sources */,
+				F9E472CE1C0C02BF0023DE60 /* Utils.m in Sources */,
+				F98A43A31C1D1EDD002E4D6A /* ZiZhiChooseTimeViewController.m in Sources */,
+				F9E477FC1C181CD9004DA412 /* ZiZhiUserCenterViewController.m in Sources */,
+				F90678751C172839009B362E /* ZiZhiProgramSignUpDetailViewController.m in Sources */,
+				F906786F1C172144009B362E /* ZiZhiApplyVipViewController.m in Sources */,
+				F92ABEE21C19250600109CE5 /* ZiZhiProgramModel.m in Sources */,
+				F9EBAEB61C19DD77005EFB34 /* ZiZhiLocalHelper.m in Sources */,
+				F9E2F7DF1C1BFCC0007AC784 /* ZiZhiSettingModel.m in Sources */,
+				F9075B761C1EBF030018B0BF /* ZiZhiWeiXinPayModel.m in Sources */,
+				F9E6A3C41C0ADD2B00C3BABA /* ZiZhiNetworkManager.m in Sources */,
+				F9E6BB411C1AB99A0093AEEF /* ZiZhiTicketDetailModel.m in Sources */,
+				F90678791C172A07009B362E /* ZiZhiProgramSignUpTableViewCell.m in Sources */,
+				F92ABEE51C1925F900109CE5 /* ZiZhiProgramEnrollModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9D0E4031C0AD6640012CAA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9D0E40C1C0AD6640012CAA4 /* ZiZhiGZWTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9D0E40E1C0AD6640012CAA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9D0E4171C0AD6640012CAA4 /* ZiZhiGZWUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9D0E4091C0AD6640012CAA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9D0E3EA1C0AD6640012CAA4 /* ZiZhiGZW */;
+			targetProxy = F9D0E4081C0AD6640012CAA4 /* PBXContainerItemProxy */;
+		};
+		F9D0E4141C0AD6640012CAA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9D0E3EA1C0AD6640012CAA4 /* ZiZhiGZW */;
+			targetProxy = F9D0E4131C0AD6640012CAA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9D0E3FA1C0AD6640012CAA4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9D0E3FB1C0AD6640012CAA4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9D0E3FF1C0AD6640012CAA4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9D0E4001C0AD6640012CAA4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9D0E4191C0AD6640012CAA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jianqiang Fu (8B2UH8CZAL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jianqiang Fu (8B2UH8CZAL)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "10c0e431-110e-489d-b139-6b9d6934fe5b";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F9D0E41A1C0AD6640012CAA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: The Audience In The Culture Media Beijing Co. Ltd. (4F9Y5N2797)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The Audience In The Culture Media Beijing Co. Ltd. (4F9Y5N2797)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "cd198122-1eac-4f4a-9cb1-9037c9213c47";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9D0E41C1C0AD6640012CAA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20C44FD010121F4D3F3CCE57 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jianqiang Fu (8B2UH8CZAL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jianqiang Fu (8B2UH8CZAL)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZiZhiGZW/Resource",
+				);
+				GCC_PREFIX_HEADER = ZiZhiGZW/PrefixHeader.pch;
+				INFOPLIST_FILE = ZiZhiGZW/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZiZhiGZW/Resource/LibBPush",
+					"$(PROJECT_DIR)/ZiZhiGZW/Resource/SDK1.6.2",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cctv.zsgz;
+				PRODUCT_NAME = "中视观众";
+				PROVISIONING_PROFILE = "10c0e431-110e-489d-b139-6b9d6934fe5b";
+			};
+			name = Debug;
+		};
+		F9D0E41D1C0AD6640012CAA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51C0B30B304E24210AA795F1 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: The Audience In The Culture Media Beijing Co. Ltd. (4F9Y5N2797)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The Audience In The Culture Media Beijing Co. Ltd. (4F9Y5N2797)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZiZhiGZW/Resource",
+				);
+				GCC_PREFIX_HEADER = ZiZhiGZW/PrefixHeader.pch;
+				INFOPLIST_FILE = ZiZhiGZW/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZiZhiGZW/Resource/LibBPush",
+					"$(PROJECT_DIR)/ZiZhiGZW/Resource/SDK1.6.2",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cctv.zsgz;
+				PRODUCT_NAME = "中视观众";
+				PROVISIONING_PROFILE = "cd198122-1eac-4f4a-9cb1-9037c9213c47";
+			};
+			name = Release;
+		};
+		F9D0E41F1C0AD6640012CAA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZiZhiGZWTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cctv.gz.ZiZhiGZWTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZiZhiGZW.app/ZiZhiGZW";
+			};
+			name = Debug;
+		};
+		F9D0E4201C0AD6640012CAA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZiZhiGZWTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cctv.gz.ZiZhiGZWTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZiZhiGZW.app/ZiZhiGZW";
+			};
+			name = Release;
+		};
+		F9D0E4221C0AD6640012CAA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZiZhiGZWUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cctv.gz.ZiZhiGZWUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZiZhiGZW;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F9D0E4231C0AD6640012CAA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZiZhiGZWUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cctv.gz.ZiZhiGZWUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZiZhiGZW;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9D0E3E61C0AD6640012CAA4 /* Build configuration list for PBXProject "ZiZhiGZW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9D0E4191C0AD6640012CAA4 /* Debug */,
+				F9D0E41A1C0AD6640012CAA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9D0E41B1C0AD6640012CAA4 /* Build configuration list for PBXNativeTarget "ZiZhiGZW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9D0E41C1C0AD6640012CAA4 /* Debug */,
+				F9D0E41D1C0AD6640012CAA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9D0E41E1C0AD6640012CAA4 /* Build configuration list for PBXNativeTarget "ZiZhiGZWTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9D0E41F1C0AD6640012CAA4 /* Debug */,
+				F9D0E4201C0AD6640012CAA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9D0E4211C0AD6640012CAA4 /* Build configuration list for PBXNativeTarget "ZiZhiGZWUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9D0E4221C0AD6640012CAA4 /* Debug */,
+				F9D0E4231C0AD6640012CAA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9D0E3E31C0AD6640012CAA4 /* Project object */;
+}

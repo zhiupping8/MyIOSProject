@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "c2fee6be-d32e-4983-81e7-3afa4a4efec9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "c2fee6be-d32e-4983-81e7-3afa4a4efec9" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "c2fee6be-d32e-4983-81e7-3afa4a4efec9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DD1A26D9-9096-430F-8AF0-9E79D7E54719",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "c2fee6be-d32e-4983-81e7-3afa4a4efec9" : "zizhi\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ZiZhiGZW",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "trunk\/ZiZhiGZW\/ZiZhiGZW.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/code.taobao.org\/svn\/zizhi",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "c2fee6be-d32e-4983-81e7-3afa4a4efec9"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  ZiZhiGZW
+//
+//  Created by zyz on 11/29/15.
+//  Copyright © 2015 zizhi. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import "MyConfig.h"
+#import "ZiZhiNetworkManager.h"
+#import "Utils.h"
+#import "UIImageView+WebCache.h"
+#import <MJExtension/MJExtension.h>
+#import "ZiZhiNetworkResponseModel.h"
+#import "ZiZhiNetworkManager.h"
+#import "ZiZhiLocalHelper.h"
+#import <MBProgressHUD/MBProgressHUD.h>
+#import "ZiZhiUserInfoLocalHelperModel.h"
+#import "MJRefresh.h"
+
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
