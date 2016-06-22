@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ZiZhiCommodityItemTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *commodityPic;
+@property (weak, nonatomic) IBOutlet UILabel *commodityTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *commodityInfoLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *commodityPriceButton;
 @end

@@ -24,7 +24,7 @@
 
 - (NSArray *)titles {
     if (!_titles) {
-        _titles = @[@"申请赠票", @"栏目报名"];
+        _titles = @[@"企业赠票", @"栏目报名"];
     }
     return _titles;
 }

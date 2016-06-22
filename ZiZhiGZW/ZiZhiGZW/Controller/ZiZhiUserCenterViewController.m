@@ -27,7 +27,7 @@
 
 - (NSArray *)titles {
     if (!_titles) {
-        _titles = @[@"我的赠票", @"我的VIP", @"我的报名"];
+        _titles = @[@"我的报名", @"我的VIP", @"我的商品"];
     }
     return _titles;
 }
@@ -63,11 +63,12 @@
     [self.segmentedScrollView scrollRectToVisible:CGRectMake(0, 0, kScreenWidth, segmentedScrollViewHeight) animated:NO];
     [self.view addSubview:self.segmentedScrollView];
     
-    ZiZhiMyTicketViewController *myTicketVC = (ZiZhiMyTicketViewController *)[Utils getVCFromSB:@"ZiZhiMyTicketViewController" storyBoardName:nil];
-    self.myTicketViewController = myTicketVC;
-    myTicketVC.view.frame = CGRectMake(0, 0, self.segmentedScrollView.frame.size.width, self.segmentedScrollView.frame.size.height);
-    [self.segmentedScrollView addSubview:myTicketVC.view];
-    [self addChildViewController:myTicketVC];
+    
+    ZiZhiMySignUpViewController *mySignUpVC = (ZiZhiMySignUpViewController *)[Utils getVCFromSB:@"ZiZhiMySignUpViewController" storyBoardName:nil];
+    self.mySignUpViewController = mySignUpVC;
+    mySignUpVC.view.frame = CGRectMake(0, 0, self.segmentedScrollView.frame.size.width, self.segmentedScrollView.frame.size.height);
+    [self.segmentedScrollView addSubview:mySignUpVC.view];
+    [self addChildViewController:mySignUpVC];
     
     ZiZhiMyVipViewController *myVipVC = (ZiZhiMyVipViewController *)[Utils getVCFromSB:@"ZiZhiMyVipViewController" storyBoardName:nil];
     self.myVipViewController = myVipVC;
@@ -75,11 +76,13 @@
     [self.segmentedScrollView addSubview:myVipVC.view];
     [self addChildViewController:myVipVC];
     
-    ZiZhiMySignUpViewController *mySignUpVC = (ZiZhiMySignUpViewController *)[Utils getVCFromSB:@"ZiZhiMySignUpViewController" storyBoardName:nil];
-    self.mySignUpViewController = mySignUpVC;
-    mySignUpVC.view.frame = CGRectMake(self.segmentedScrollView.frame.size.width * 2, 0, self.segmentedScrollView.frame.size.width, self.segmentedScrollView.frame.size.height);
-    [self.segmentedScrollView addSubview:mySignUpVC.view];
-    [self addChildViewController:mySignUpVC];
+    ZiZhiMyTicketViewController *myTicketVC = (ZiZhiMyTicketViewController *)[Utils getVCFromSB:@"ZiZhiMyTicketViewController" storyBoardName:nil];
+    self.myTicketViewController = myTicketVC;
+    myTicketVC.view.frame = CGRectMake(self.segmentedScrollView.frame.size.width * 2, 0, self.segmentedScrollView.frame.size.width, self.segmentedScrollView.frame.size.height);
+    [self.segmentedScrollView addSubview:myTicketVC.view];
+    [self addChildViewController:myTicketVC];
+    
+    
 }
 
 - (void)initUI {

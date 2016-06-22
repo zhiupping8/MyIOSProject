@@ -7,9 +7,21 @@
 //
 
 #import "ZiZhiCommodityDetailViewController.h"
+#import "MarqueeLabel.h"
 
 @interface ZiZhiCommodityDetailViewController ()
+@property (weak, nonatomic) IBOutlet MarqueeLabel *announcementLabel;
+@property (weak, nonatomic) IBOutlet UIView *bannerView;
+@property (weak, nonatomic) IBOutlet UILabel *tiptitleLabel;
 
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+@property (weak, nonatomic) IBOutlet UITextField *idCardNumberTextField;
+@property (weak, nonatomic) IBOutlet UITextField *addressTextField;
+
+
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @end
 
 @implementation ZiZhiCommodityDetailViewController
