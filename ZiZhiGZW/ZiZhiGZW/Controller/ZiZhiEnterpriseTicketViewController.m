@@ -15,6 +15,7 @@
 #import "ZiZhiAfficheModel.h"
 #import "ZiZhiCommodityItemTableViewCell.h"
 #import "ZiZhiHomeCommodityViewController.h"
+#import "ZiZhiCommodityPicGestureRecognizer.h"
 
 @interface ZiZhiEnterpriseTicketViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *bannerView;
@@ -123,11 +124,13 @@
     
     //add touch event
     
-    UIGestureRecognizer *gestureRecongnizerCommodity = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchCommodityImageView:)];
+    ZiZhiCommodityPicGestureRecognizer *gestureRecongnizerCommodity = [[ZiZhiCommodityPicGestureRecognizer alloc] initWithTarget:self action:@selector(touchCommodityImageView:)];
     cell.commodityPic.userInteractionEnabled = YES;
+    gestureRecongnizerCommodity.tag = indexPath.row;
     [cell.commodityPic addGestureRecognizer:gestureRecongnizerCommodity];
     
     [cell.commodityPriceButton addTarget:self action:@selector(touchCommodityPriceButton:) forControlEvents:UIControlEventTouchUpInside];
+    cell.commodityPriceButton.tag = indexPath.row;
     return cell;
 }
 
@@ -144,17 +147,18 @@
 - (void)touchCommodityImageView:(UIGestureRecognizer *)gestureRecognizer{
     CCLog(@"touch commodity imageView");
     ZiZhiHomeCommodityViewController *homeCommodityViewController = [[ZiZhiHomeCommodityViewController alloc] init];
-    
-#warning @"ZiZhiHomeCommodityViewController 数据处理"
-    
+    ZiZhiCommodityPicGestureRecognizer *commodityPicGestureRecognizer = (ZiZhiCommodityPicGestureRecognizer *)gestureRecognizer;
+    ZiZhiCommodityModel *model = [self.commodityData objectAtIndex:commodityPicGestureRecognizer.tag];
+    homeCommodityViewController.goodid = model.goodid;
     [self.navigationController pushViewController:homeCommodityViewController animated:YES];
 }
 
 - (void)touchCommodityPriceButton:(id)sender {
     ZiZhiHomeCommodityViewController *homeCommodityViewController = [[ZiZhiHomeCommodityViewController alloc] init];
     //数据处理
-#warning @"ZiZhiHomeCommodityViewController 数据处理"
-    
+    UIButton *button = (UIButton *)sender;
+    ZiZhiCommodityModel *model = [self.commodityData objectAtIndex:button.tag];
+    homeCommodityViewController.goodid = model.goodid;
     [self.navigationController pushViewController:homeCommodityViewController animated:YES];
 }
 
@@ -221,7 +225,7 @@
         existids = [existids stringByAppendingString:[NSString stringWithFormat:@",%@", commodityModel.goodid]];
     }
     [params setObject:existids forKey:@"existids"];
-    [[ZiZhiNetworkManager sharedManager] get:@"" parameters:params success:^(NSDictionary *dictionary) {
+    [[ZiZhiNetworkManager sharedManager] get:k_url_commodity_list parameters:params success:^(NSDictionary *dictionary) {
         [self.tableView.header endRefreshing];
         ZiZhiNetworkResponseModel *model = [ZiZhiNetworkResponseModel objectWithKeyValues:dictionary];
         if (CodeSuccess == model.httpCode) {

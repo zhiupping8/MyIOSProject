@@ -3227,7 +3227,7 @@
                         <outlet property="idCardNumberTextField" destination="2ZR-Pe-wcR" id="AY9-op-cW7"/>
                         <outlet property="nameTextField" destination="lBs-Tp-IBs" id="Ad1-yJ-SHU"/>
                         <outlet property="phoneTextField" destination="vHd-bV-bgB" id="LbA-nm-2Wo"/>
-                        <outlet property="scrollView" destination="lST-Wd-hBL" id="Ufz-JT-kMX"/>
+                        <outlet property="scrollView" destination="lST-Wd-hBL" id="kVF-B6-VwQ"/>
                         <outlet property="tiptitleLabel" destination="VwP-2Z-L6X" id="qnG-ZK-4TS"/>
                         <outlet property="webView" destination="BDe-WN-qfB" id="FgN-yQ-D0b"/>
                     </connections>

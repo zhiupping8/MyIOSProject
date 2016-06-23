@@ -65,6 +65,8 @@
 		F9D0E4011C0AD6640012CAA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D0E3FF1C0AD6640012CAA4 /* LaunchScreen.storyboard */; };
 		F9D0E40C1C0AD6640012CAA4 /* ZiZhiGZWTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D0E40B1C0AD6640012CAA4 /* ZiZhiGZWTests.m */; };
 		F9D0E4171C0AD6640012CAA4 /* ZiZhiGZWUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D0E4161C0AD6640012CAA4 /* ZiZhiGZWUITests.m */; };
+		F9DC109A1D1C222B00ADD557 /* ZiZhiCommodityDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DC10991D1C222B00ADD557 /* ZiZhiCommodityDetailModel.m */; };
+		F9DC109D1D1C2B7300ADD557 /* ZiZhiCommodityPicGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DC109C1D1C2B7300ADD557 /* ZiZhiCommodityPicGestureRecognizer.m */; };
 		F9E2376E1C0BFB56004F74B7 /* ZiZhiHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2376D1C0BFB56004F74B7 /* ZiZhiHomeViewController.m */; };
 		F9E2F7DF1C1BFCC0007AC784 /* ZiZhiSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2F7DE1C1BFCC0007AC784 /* ZiZhiSettingModel.m */; };
 		F9E472CE1C0C02BF0023DE60 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E472CD1C0C02BF0023DE60 /* Utils.m */; };
@@ -229,6 +231,10 @@
 		F9D0E4121C0AD6640012CAA4 /* ZiZhiGZWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZiZhiGZWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D0E4161C0AD6640012CAA4 /* ZiZhiGZWUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZiZhiGZWUITests.m; sourceTree = "<group>"; };
 		F9D0E4181C0AD6640012CAA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9DC10981D1C222B00ADD557 /* ZiZhiCommodityDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiCommodityDetailModel.h; sourceTree = "<group>"; };
+		F9DC10991D1C222B00ADD557 /* ZiZhiCommodityDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiCommodityDetailModel.m; sourceTree = "<group>"; };
+		F9DC109B1D1C2B7300ADD557 /* ZiZhiCommodityPicGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiCommodityPicGestureRecognizer.h; sourceTree = "<group>"; };
+		F9DC109C1D1C2B7300ADD557 /* ZiZhiCommodityPicGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiCommodityPicGestureRecognizer.m; sourceTree = "<group>"; };
 		F9E2376C1C0BFB56004F74B7 /* ZiZhiHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiZhiHomeViewController.h; sourceTree = "<group>"; };
 		F9E2376D1C0BFB56004F74B7 /* ZiZhiHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiZhiHomeViewController.m; sourceTree = "<group>"; };
 		F9E237701C0C0049004F74B7 /* HomeConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeConfig.h; sourceTree = "<group>"; };
@@ -451,6 +457,10 @@
 				F9BD55F51C2413030037B066 /* ZiZhiPayViewValueModel.m */,
 				F905A4BF1D1AD86B00FB78BD /* ZiZhiCommodityModel.h */,
 				F905A4C01D1AD86B00FB78BD /* ZiZhiCommodityModel.m */,
+				F9DC10981D1C222B00ADD557 /* ZiZhiCommodityDetailModel.h */,
+				F9DC10991D1C222B00ADD557 /* ZiZhiCommodityDetailModel.m */,
+				F9DC109B1D1C2B7300ADD557 /* ZiZhiCommodityPicGestureRecognizer.h */,
+				F9DC109C1D1C2B7300ADD557 /* ZiZhiCommodityPicGestureRecognizer.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -995,11 +1005,13 @@
 				F9EBAEB91C19E4E4005EFB34 /* ZiZhiRootViewController.m in Sources */,
 				F9075B791C1ECA770018B0BF /* ZiZhiAfficheModel.m in Sources */,
 				F9E6BB4A1C1AD73A0093AEEF /* ZiZhiProgramDetailModel.m in Sources */,
+				F9DC109D1D1C2B7300ADD557 /* ZiZhiCommodityPicGestureRecognizer.m in Sources */,
 				F9D0E3F31C0AD6640012CAA4 /* AppDelegate.m in Sources */,
 				F9E478031C1826AC004DA412 /* ZiZhiMyVipTableViewCell.m in Sources */,
 				F97658101C16CFDB00E48162 /* ZiZhiHomeProgramViewController.m in Sources */,
 				F9EBAEB01C19CC57005EFB34 /* ZiZhiADViewController.m in Sources */,
 				F92ABEDF1C19244100109CE5 /* ZiZhiOrderModel.m in Sources */,
+				F9DC109A1D1C222B00ADD557 /* ZiZhiCommodityDetailModel.m in Sources */,
 				F905A4B51D1ABF2800FB78BD /* ZiZhiEnterpriseTicketViewController.m in Sources */,
 				F9E6A3D91C0B38ED00C3BABA /* ZiZhiServiceViewController.m in Sources */,
 				F92ABEEE1C19278100109CE5 /* ZiZhiTicketApplyModel.m in Sources */,

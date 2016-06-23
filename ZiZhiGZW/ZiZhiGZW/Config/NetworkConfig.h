@@ -52,6 +52,11 @@ static NSString * const k_url_apply_detail = @"/cctvgz/client/ticket/apply/detai
 
 static NSString * const k_url_apply_vipdetail = @"/cctvgz/client/ticket/apply/vipdetail.do"; //vip报名详情
 
+static NSString * const k_url_commodity_list = @"/cctvgz/client/goods/list.do"; //商品列表
+static NSString * const k_url_commodity_detail = @"/cctvgz/client/goods/detail.do"; //商品详情
+static NSString * const k_url_commodity_order = @"/cctvgz/client/goods/order.do"; //添加商品订单
+static NSString * const k_url_commodity_payinfo = @"/cctvgz/client/goods/payinfo.do"; //获取商品订单的支付信息
+
 /**
  *  首页栏目报名列表
  *  @param page 页码从1开始

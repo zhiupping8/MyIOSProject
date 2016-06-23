@@ -132,7 +132,7 @@
     ZiZhiPayViewValueModel *payViewNeedModel = [ZiZhiPayViewValueModel sharedModel];
     [params setObject:payViewNeedModel.orderId forKey:@"ordernumber"];
     [params setObject:@(self.selectedIndex + 1) forKey:@"paytype"];
-    [[ZiZhiNetworkManager sharedManager] post:k_url_userrater_payinfo parameters:params success:^(NSDictionary *dictionary) {
+    [[ZiZhiNetworkManager sharedManager] post:k_url_commodity_payinfo parameters:params success:^(NSDictionary *dictionary) {
         ZiZhiNetworkResponseModel *model = [ZiZhiNetworkResponseModel objectWithKeyValues:dictionary];
         CCLog(@"dictionary:%@", dictionary);
         if (CodeSuccess == model.httpCode) {

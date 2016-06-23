@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ZiZhiCommodityDetailViewController : UIViewController
-
+@property (strong, nonatomic) NSString *goodid;
 @end
