@@ -11,6 +11,7 @@
 typedef NS_ENUM(NSInteger, Code)
 {
     CodeSuccess = 0,//成功
+    CodeSuccess2 = 1, //只有商品订单提交成功才有可能有这个状态码(1表示已经存在的用户，0表示新用户)
     CodeNoData = 101 ,
     CodeError = 201 ,//
 };

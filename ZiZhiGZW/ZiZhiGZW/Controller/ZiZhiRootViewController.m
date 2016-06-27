@@ -29,13 +29,18 @@
 @implementation ZiZhiRootViewController
 
 - (void)initUI {
-    UIImage *image = [UIImage imageNamed:@"bottombg"];
-    CGRect rect = self.tabBar.bounds;
-    UIGraphicsBeginImageContext(CGSizeMake(rect.size.width,rect.size.height+14));
-    [image drawInRect:CGRectMake(0, 0, rect.size.width, rect.size.height+14)];
-    UIImage *reSizeImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    self.tabBar.backgroundImage = reSizeImage;
+//    UIImage *image = [UIImage imageNamed:@"bottombg"];
+//    CGRect rect = self.tabBar.bounds;
+//    UIGraphicsBeginImageContext(CGSizeMake(rect.size.width,rect.size.height+14));
+//    [image drawInRect:CGRectMake(0, 0, rect.size.width, rect.size.height+14)];
+//    UIImage *reSizeImage = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    self.tabBar.backgroundImage = reSizeImage;
+    CGRect rect = self.tabBar.frame;
+    UIImageView *barImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, rect.size.width, 2)];
+    barImageView.image = [UIImage imageNamed:@"bar"];
+    [self.tabBar addSubview:barImageView];
+    
 //    self.tabBar.layer.borderWidth = 0;
 //    self.tabBar.layer.borderColor = [[UIColor clearColor] CGColor];
 //    [self.tabBar setClipsToBounds:YES];
@@ -50,8 +55,8 @@
     homeItem1.selectedImage = [[UIImage imageNamed:@"64-2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UITabBarItem *homeItem2 = items[2];
 //    homeItem2.imageInsets = UIEdgeInsetsMake(-16, -5, 6, -5);
-    homeItem2.image = [[UIImage imageNamed:@"64-4"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    homeItem2.selectedImage = [[UIImage imageNamed:@"64-4"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    homeItem2.image = [[UIImage imageNamed:@"my"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    homeItem2.selectedImage = [[UIImage imageNamed:@"my"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 //    homeItem2.image = [[UIImage imageNamed:@"64-1"] imageWithAlignmentRectInsets:UIEdgeInsetsMake(-16, -5, 6, -5)];
 //    homeItem2.selectedImage = [[UIImage imageNamed:@"64-1"] imageWithAlignmentRectInsets:UIEdgeInsetsMake(-16, -5, 6, -5)];
     
@@ -62,20 +67,9 @@
     homeItem4.image = [[UIImage imageNamed:@"64-5"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     homeItem4.selectedImage = [[UIImage imageNamed:@"64-5"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 130, 44)];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 2, 36, 36)];
-    imageView.image = [UIImage imageNamed:@"64-1"];
-    [view addSubview:imageView];
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(36, 0, 90, 44)];
-    titleLabel.font = [UIFont boldSystemFontOfSize:20];
-    titleLabel.textColor = [UIColor whiteColor];
-    titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-    titleLabel.text = @"中视观众";
-    [view addSubview:titleLabel];
-    self.navigationItem.titleView = view;
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cctv_log"]];
+    imageView.frame = CGRectMake(0, 0, 120, 37);
+    self.navigationItem.titleView = imageView;
     
     
     

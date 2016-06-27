@@ -27,7 +27,8 @@
 #define kSignUpRefreshNotification @"kSignUpRefreshNotification"
 #define kMyVipRefreshNotification @"kMyVipRefreshNotification"
 #define kMyTicketRefreshNotification @"kMyTicketRefreshNotification"
-#define kGoToPayNotification @"kGoToPayNotification"
+#define kVipGoToPayNotification @"kVipGoToPayNotification"
+#define kCommodityGoToPayNotification @"kCommodityGoToPayNotification"
 
 //local archive
 #define kADModelArchive @"ad_model_archive"

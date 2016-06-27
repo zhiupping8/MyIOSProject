@@ -25,20 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 130, 44)];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 2, 36, 36)];
-    imageView.image = [UIImage imageNamed:@"64-1"];
-    [view addSubview:imageView];
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(36, 0, 90, 44)];
-    titleLabel.font = [UIFont boldSystemFontOfSize:20];
-    titleLabel.textColor = [UIColor whiteColor];
-    titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-    titleLabel.text = @"中视观众";
-    [view addSubview:titleLabel];
-    self.navigationItem.titleView = view;
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cctv_log"]];
+    imageView.frame = CGRectMake(0, 0, 120, 37);
+    self.navigationItem.titleView = imageView;
     
     CGRect rect = self.navigationController.navigationBar.bounds;
     UIImageView *barImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, rect.size.height-3, rect.size.width, 3)];
@@ -222,21 +211,6 @@
             hud.mode = MBProgressHUDModeText;
             hud.detailsLabelText = @"支付成功";
             [hud hide:YES afterDelay:kMBProgressHUDTipsTime];
-            
-            //申请成功，后自动登录（如果本地已经登录则不替换）
-            if ([[ZiZhiUserInfoLocalHelperModel userInfoLocalHelper] isLogin]) {
-                //刷新我的报名列表
-                [[NSNotificationCenter defaultCenter] postNotificationName:kMyVipRefreshNotification object:nil];
-            }else {
-                CCLog(@"登录通知发送");
-                ZiZhiPayViewValueModel *payViewNeedModel = [ZiZhiPayViewValueModel sharedModel];
-//                NSMutableDictionary *dictionary = [NSMutableDictionary new];
-//                [dictionary setObject:payViewNeedModel.idcardnumber forKey:@"idcardnumber"];
-//                [dictionary setObject:payViewNeedModel.phone forKey:@"phone"];
-//                [[NSNotificationCenter defaultCenter] postNotificationName:kLoginNotification object:dictionary];
-                [self requestLogin:payViewNeedModel.idcardnumber phone:payViewNeedModel.phone];
-            }
-            
             [self.navigationController popViewControllerAnimated:YES];
             [[NSNotificationCenter defaultCenter] postNotificationName:kALiPaySuccess object:resultDic];
         }else {
@@ -277,20 +251,6 @@
     hud.mode = MBProgressHUDModeText;
     hud.detailsLabelText = @"支付成功";
     [hud hide:YES afterDelay:kMBProgressHUDTipsTime];
-    
-    //申请成功，后自动登录（如果本地已经登录则不替换）
-    if ([[ZiZhiUserInfoLocalHelperModel userInfoLocalHelper] isLogin]) {
-        //刷新我的报名列表
-        [[NSNotificationCenter defaultCenter] postNotificationName:kMyVipRefreshNotification object:nil];
-    }else {
-        ZiZhiPayViewValueModel *payViewNeedModel = [ZiZhiPayViewValueModel sharedModel];
-//        NSMutableDictionary *dictionary = [NSMutableDictionary new];
-//        [dictionary setObject:payViewNeedModel.idcardnumber forKey:@"idcardnumber"];
-//        [dictionary setObject:payViewNeedModel.phone forKey:@"phone"];
-//        [[NSNotificationCenter defaultCenter] postNotificationName:kLoginNotification object:dictionary];
-        [self requestLogin:payViewNeedModel.idcardnumber phone:payViewNeedModel.phone];
-    }
-    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

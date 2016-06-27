@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <HMSegmentedControl/HMSegmentedControl.h>
-#import "ZiZhiApplyTicketViewController.h"
+//#import "ZiZhiApplyTicketViewController.h"
+#import "ZiZhiEnterpriseTicketViewController.h"
 #import "ZiZhiProgramSignUpViewController.h"
 @interface ZiZhiHomeViewController : UIViewController
 @property (nonatomic, strong) HMSegmentedControl *segmentedControl;
-
-@property (strong, nonatomic) ZiZhiApplyTicketViewController *applyTickteViewController;
+@property (strong, nonatomic) ZiZhiEnterpriseTicketViewController *enterpriseTicketViewController;
+//@property (strong, nonatomic) ZiZhiApplyTicketViewController *applyTickteViewController;
 @property (strong, nonatomic) ZiZhiProgramSignUpViewController *programSignUpViewController;
 @end

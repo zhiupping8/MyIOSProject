@@ -35,6 +35,8 @@
 @property (strong, nonatomic) NSArray *afficheArray;
 @property (strong, nonatomic) ZiZhiCommodityDetailModel *commodityDetailModel;
 @property (strong, nonatomic) ZiZhiNetworkResponseModel *payInfoResponseModel;
+
+@property (assign, nonatomic) NSInteger code;
 @end
 
 @implementation ZiZhiCommodityDetailViewController
@@ -89,7 +91,7 @@
     [self.scrollView.header beginRefreshing];
     
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotoPay) name:kGoToPayNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotoPay) name:kCommodityGoToPayNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(alipaySuccess:) name:kALiPaySuccess object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(alipaySuccess:) name:kALiPaySuccess2 object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(weiXinPaySuccess) name:kWeiXinPaySuccess object:nil];
@@ -102,7 +104,7 @@
 }
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self  name:kGoToPayNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self  name:kCommodityGoToPayNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self  name:kALiPaySuccess object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self  name:kALiPaySuccess2 object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:kWeiXinPaySuccess object:nil];
@@ -110,7 +112,7 @@
 
 - (void)updateUI {
     self.tiptitleLabel.text = self.commodityDetailModel.tipinfo;
-    [self loadWebView:self.commodityDetailModel.detailDescribePath];
+    [self loadWebView:[NSString stringWithFormat:@"%@%@%@", K_NETWORK_BASE, K_BASE_FIELD, self.commodityDetailModel.detailDescribePath]];
 }
 
 - (void)loadWebView:(NSString *)urlStr {
@@ -163,11 +165,16 @@
     if([resultDic[@"resultStatus"] isEqualToString:@"9000"]) {
         //        "恭喜您注册成为中视观众VIP会员,用户名为身份证号"+StringUtils.getBlurNumber(idCardNumber, '*', 3)+",密码为手机号"+StringUtils.getBlurNumber(phone, '*', 3)
         hud.mode = MBProgressHUDModeText;
-        NSString *idcard = self.idCardNumberTextField.text;
-        NSString *phone = self.phoneTextField.text;
-        NSString *idcard1 = [idcard stringByReplacingCharactersInRange:NSMakeRange(3, idcard.length-6) withString:@"************"];
-        NSString *phone1 = [phone stringByReplacingCharactersInRange:NSMakeRange(3, phone.length-6) withString:@"*****"];
-        hud.detailsLabelText = [NSString stringWithFormat:@"支付成功，恭喜您注册成为中视观众VIP会员,用户名为身份证号%@,密码为手机号%@", idcard1, phone1];
+        if (1 == self.code) {
+            NSString *idcard = self.idCardNumberTextField.text;
+            NSString *phone = self.phoneTextField.text;
+            NSString *idcard1 = [idcard stringByReplacingCharactersInRange:NSMakeRange(3, idcard.length-6) withString:@"************"];
+            NSString *phone1 = [phone stringByReplacingCharactersInRange:NSMakeRange(3, phone.length-6) withString:@"*****"];
+            hud.detailsLabelText = [NSString stringWithFormat:@"支付成功，恭喜您注册成为中视观众会员,用户名为身份证号%@,密码为手机号%@", idcard1, phone1];
+        } else {
+            hud.detailsLabelText = [NSString stringWithFormat:@"恭喜您购买成功点击我的商品查看详情"];
+        }
+        
         [hud hide:YES afterDelay:6.0];
     }else {
         hud.mode = MBProgressHUDModeText;
@@ -179,8 +186,17 @@
 - (void)weiXinPaySuccess {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeText;
-    hud.detailsLabelText = @"支付成功";
-    [hud hide:YES afterDelay:kMBProgressHUDTipsTime];
+    if (1 == self.code) {
+        NSString *idcard = self.idCardNumberTextField.text;
+        NSString *phone = self.phoneTextField.text;
+        NSString *idcard1 = [idcard stringByReplacingCharactersInRange:NSMakeRange(3, idcard.length-6) withString:@"************"];
+        NSString *phone1 = [phone stringByReplacingCharactersInRange:NSMakeRange(3, phone.length-6) withString:@"*****"];
+        hud.detailsLabelText = [NSString stringWithFormat:@"支付成功，恭喜您注册成为中视观众会员,用户名为身份证号%@,密码为手机号%@", idcard1, phone1];
+    } else {
+        hud.detailsLabelText = [NSString stringWithFormat:@"恭喜您购买成功点击我的商品查看详情"];
+    }
+    
+    [hud hide:YES afterDelay:6.0];
 }
 
 #pragma mark - Network Request
@@ -225,7 +241,7 @@
 
 - (void)requestCommodityDetail {
     NSMutableDictionary *params = [NSMutableDictionary new];
-    if (self.goodid != nil && [self.goodid isEqualToString:@""]) {
+    if (self.goodid != nil && ![self.goodid isEqualToString:@""]) {
         [params setObject:self.goodid forKey:@"goodid"];
     }
     
@@ -271,19 +287,22 @@
     [params setObject:name forKey:@"name"];
     [params setObject:phone forKey:@"phone"];
     [params setObject:idcardnumber forKey:@"idcardnumber"];
+    [params setObject:address forKey:@"address"];
     [params setObject:goodid forKey:@"goodid"];
     [[ZiZhiNetworkManager sharedManager] post:k_url_commodity_order parameters:params success:^(NSDictionary *dictionary) {
         [self.scrollView.header endRefreshing];
         ZiZhiNetworkResponseModel *model = [ZiZhiNetworkResponseModel objectWithKeyValues:dictionary];
-        if (CodeSuccess == model.httpCode) {
+        self.payInfoResponseModel = model;
+        if (CodeSuccess == model.httpCode || CodeSuccess2 == model.httpCode) {
+            self.code = model.httpCode;
             hud.mode = MBProgressHUDModeText;
             hud.detailsLabelText = model.message;
             [hud hide:YES afterDelay:6.0];
-            
+            [[NSNotificationCenter defaultCenter] postNotificationName:kCommodityGoToPayNotification object:nil];
             //申请成功，后自动登录（如果本地已经登录则不替换）
             if ([[ZiZhiUserInfoLocalHelperModel userInfoLocalHelper] isLogin]) {
                 //刷新我的报名列表
-                [[NSNotificationCenter defaultCenter] postNotificationName:kGoToPayNotification object:nil];
+                [[NSNotificationCenter defaultCenter] postNotificationName:kMyTicketRefreshNotification object:nil];
             }else {
                 [self requestLogin:idcardnumber phone:phone];
             }
@@ -291,6 +310,7 @@
             hud.mode = MBProgressHUDModeText;
             hud.detailsLabelText = model.message;
             [hud hide:YES afterDelay:6.0];
+            CCLog(@"7788");
         }
         
     } failure:^(NSInteger errorCode, NSString *errorMsg) {
@@ -348,7 +368,7 @@
     }
     if ([Utils isBlankString:address]) {
         hud.mode = MBProgressHUDModeText;
-        hud.detailsLabelText = @"收票地址不能为空";
+        hud.detailsLabelText = @"收货地址不能为空";
         [hud hide:YES afterDelay:kMBProgressHUDTipsTime];
         [self.addressTextField becomeFirstResponder];
         return;

@@ -36,20 +36,9 @@
 - (void)initUI {
     [self addGestureToServiceImageView];
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 130, 44)];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 2, 36, 36)];
-    imageView.image = [UIImage imageNamed:@"64-1"];
-    [view addSubview:imageView];
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(36, 0, 90, 44)];
-    titleLabel.font = [UIFont boldSystemFontOfSize:20];
-    titleLabel.textColor = [UIColor whiteColor];
-    titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-    titleLabel.text = @"中视观众";
-    [view addSubview:titleLabel];
-    self.navigationItem.titleView = view;
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cctv_log"]];
+    imageView.frame = CGRectMake(0, 0, 120, 37);
+    self.navigationItem.titleView = imageView;
     
     CGRect rect = self.navigationController.navigationBar.bounds;
     UIImageView *barImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, rect.size.height-3, rect.size.width, 3)];

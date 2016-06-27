@@ -24,6 +24,7 @@ typedef void(^ZiZhiResponseSuccessEmptyBlock)(); //return block
 
 //#define K_NETWORK_BASE @"http://192.168.1.102:8080"  //network address119.10.9.17
 #define K_NETWORK_BASE @"http://119.10.9.17:8080"  //network address
+//#define K_NETWORK_BASE @"http://121.42.56.35:8080"
 
 #define K_BASE_FIELD @"/cctvgz/"
 
@@ -95,6 +96,7 @@ static NSString * const k_url_regist = @"/cctvgz/client/user/operate/regist.do";
  *  @param page   页码
  */
 static NSString * const k_url_apply_infolist = @"/cctvgz/client/ticket/apply/infolist.do";
+static NSString * const k_url_commodity_infotList = @"/cctvgz/client/goods/infolist.do";
 
 /**
  *  申请赠票
@@ -182,6 +184,7 @@ static NSString * const k_url_setting_setting = @"/cctvgz/client/setting/setting
  *  @param ticketapplyid
  */
 static NSString * const k_url_ticket_apply_logistic = @"http://119.10.9.17:8080/cctvgz/client/order/logistic.do?ticketapplyid=%@";
+static NSString * const k_url_commodity_logistic = @"http://119.10.9.17:8080/cctvgz/client/order/logistic.do?goodsorderid=%@";
 
 /**
  *  获取vip物流信息

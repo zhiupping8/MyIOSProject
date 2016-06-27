@@ -88,7 +88,7 @@
         [params setObject:@(self.page) forKey:@"page"];
         //    [params setObject:helper.userInfoModel.phone forKey:@"phone"];
         
-        [[ZiZhiNetworkManager sharedManager] get:k_url_apply_infolist parameters:params success:^(NSDictionary *dictionary) {
+        [[ZiZhiNetworkManager sharedManager] get:k_url_commodity_infotList parameters:params success:^(NSDictionary *dictionary) {
             if (1 == self.page) {
                 [self.tableView.header endRefreshing];
             }else {
@@ -172,7 +172,7 @@
         [hud hide:YES afterDelay:kMBProgressHUDTipsTime];
     }else {
         if ([model.ismylogistic isEqualToString:@"1"]) {
-            NSString *url = [NSString stringWithFormat:k_url_ticket_apply_logistic, model.orderid];
+            NSString *url = [NSString stringWithFormat:k_url_commodity_logistic, model.orderid];
             [self gotoWebView:url];
         }else if ([model.ismylogistic isEqualToString:@"0"]) {
             NSString *url = [NSString stringWithFormat:k_url_third_logistic, model.logistictype, model.logisticno];

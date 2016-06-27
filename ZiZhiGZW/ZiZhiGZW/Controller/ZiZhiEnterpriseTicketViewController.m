@@ -16,6 +16,9 @@
 #import "ZiZhiCommodityItemTableViewCell.h"
 #import "ZiZhiHomeCommodityViewController.h"
 #import "ZiZhiCommodityPicGestureRecognizer.h"
+#import "ZiZhiMainalModel.h"
+
+#import "ZiZhiHomeVipViewController.h"
 
 @interface ZiZhiEnterpriseTicketViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *bannerView;
@@ -41,9 +44,14 @@
     
     [self initUI];
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self.commodityData removeAllObjects];
         [self requestBanner];
+        [self requestMainal];
         [self requestCommodities];
         [self requestNotList];
+    }];
+    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [self requestCommodities];
     }];
     [self.tableView.header beginRefreshing];
     // Do any additional setup after loading the view.
@@ -97,7 +105,7 @@
         self.announcementLabel.fadeLength = 10.0f;
         self.announcementLabel.trailingBuffer = 30.0f;
         
-        UIGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoAfficheDetail)];
+        UIGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoAfficheDetail:)];
         self.announcementLabel.userInteractionEnabled = YES;
         [self.announcementLabel addGestureRecognizer:gesture];
     }
@@ -116,21 +124,44 @@
         cell = [[ZiZhiCommodityItemTableViewCell alloc] init];
         [tableView registerClass:[ZiZhiCommodityItemTableViewCell class] forCellReuseIdentifier:reuseIdentifier];
     }
-    ZiZhiCommodityModel *commodityModel = (ZiZhiCommodityModel *)[self.commodityData objectAtIndex:indexPath.row];
-    [cell.commodityPic  sd_setImageWithURL:[NSURL URLWithString:commodityModel.picpath] placeholderImage:[UIImage imageNamed:@"no_img_tip.jpg"]];
-    cell.commodityTitleLabel.text = commodityModel.tipinfo;
-    cell.commodityInfoLabel.text = commodityModel.tiptip;
-    [cell.commodityPriceButton setTitle:[NSString stringWithFormat:@"%@元", commodityModel.tippriceinfo] forState:UIControlStateNormal];
+    if ([self.commodityData count] > 0) {
+        if (0 == indexPath.row) {
+            ZiZhiMainalModel *mainalModel = (ZiZhiMainalModel *)[self.commodityData objectAtIndex:indexPath.row];
+            [cell.commodityPic  sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", K_NETWORK_BASE, K_BASE_FIELD, mainalModel.picpath]] placeholderImage:[UIImage imageNamed:@"no_img_tip.jpg"]];
+            cell.commodityTitleLabel.text = mainalModel.tipinfo;
+            cell.commodityInfoLabel.text = mainalModel.tiptip;
+            [cell.commodityPriceButton setTitle:[NSString stringWithFormat:@"%@元", mainalModel.tippriceinfo] forState:UIControlStateNormal];
+            
+            //add touch event
+            
+            ZiZhiCommodityPicGestureRecognizer *gestureRecongnizerCommodity = [[ZiZhiCommodityPicGestureRecognizer alloc] initWithTarget:self action:@selector(touchCommodityImageView:)];
+            cell.commodityPic.userInteractionEnabled = YES;
+            gestureRecongnizerCommodity.tag = indexPath.row;
+            [cell.commodityPic addGestureRecognizer:gestureRecongnizerCommodity];
+            
+            [cell.commodityPriceButton addTarget:self action:@selector(touchCommodityPriceButton:) forControlEvents:UIControlEventTouchUpInside];
+            cell.commodityPriceButton.tag = indexPath.row;
+        } else if (indexPath.row >= 1 && [self.commodityData count] > 1) {
+            CCLog(@"commodityData:%@", self.commodityData);
+            ZiZhiCommodityModel *commodityModel = [self.commodityData objectAtIndex:indexPath.row];
+            [cell.commodityPic  sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@", K_NETWORK_BASE, K_BASE_FIELD, commodityModel.picpath]] placeholderImage:[UIImage imageNamed:@"no_img_tip.jpg"]];
+            cell.commodityTitleLabel.text = commodityModel.tipinfo;
+            cell.commodityInfoLabel.text = commodityModel.tiptip;
+            [cell.commodityPriceButton setTitle:[NSString stringWithFormat:@"%@元", commodityModel.tippriceinfo] forState:UIControlStateNormal];
+            
+            //add touch event
+            
+            ZiZhiCommodityPicGestureRecognizer *gestureRecongnizerCommodity = [[ZiZhiCommodityPicGestureRecognizer alloc] initWithTarget:self action:@selector(touchCommodityImageView:)];
+            cell.commodityPic.userInteractionEnabled = YES;
+            gestureRecongnizerCommodity.tag = indexPath.row;
+            [cell.commodityPic addGestureRecognizer:gestureRecongnizerCommodity];
+            
+            [cell.commodityPriceButton addTarget:self action:@selector(touchCommodityPriceButton:) forControlEvents:UIControlEventTouchUpInside];
+            cell.commodityPriceButton.tag = indexPath.row;
+        }
+
+    }
     
-    //add touch event
-    
-    ZiZhiCommodityPicGestureRecognizer *gestureRecongnizerCommodity = [[ZiZhiCommodityPicGestureRecognizer alloc] initWithTarget:self action:@selector(touchCommodityImageView:)];
-    cell.commodityPic.userInteractionEnabled = YES;
-    gestureRecongnizerCommodity.tag = indexPath.row;
-    [cell.commodityPic addGestureRecognizer:gestureRecongnizerCommodity];
-    
-    [cell.commodityPriceButton addTarget:self action:@selector(touchCommodityPriceButton:) forControlEvents:UIControlEventTouchUpInside];
-    cell.commodityPriceButton.tag = indexPath.row;
     return cell;
 }
 
@@ -138,28 +169,44 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //    ZiZhiProgramSignUpDetailViewController *detailVC = (ZiZhiProgramSignUpDetailViewController *)[Utils getVCFromSB:@"ZiZhiProgramSignUpDetailViewController" storyBoardName:nil];
-
-    
+    if (0 == indexPath.row) {
+        ZiZhiHomeVipViewController *homeVipViewController = [[ZiZhiHomeVipViewController alloc] init];
+        [self.navigationController pushViewController:homeVipViewController animated:YES];
+    } else {
+        ZiZhiHomeCommodityViewController *homeCommodityViewController = [[ZiZhiHomeCommodityViewController alloc] init];
+        ZiZhiCommodityModel *commodityModel = [self.commodityData objectAtIndex:indexPath.row];
+        homeCommodityViewController.goodid = commodityModel.goodid;
+        [self.navigationController pushViewController:homeCommodityViewController animated:YES];
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 #pragma mark - Touch Event
 - (void)touchCommodityImageView:(UIGestureRecognizer *)gestureRecognizer{
     CCLog(@"touch commodity imageView");
-    ZiZhiHomeCommodityViewController *homeCommodityViewController = [[ZiZhiHomeCommodityViewController alloc] init];
     ZiZhiCommodityPicGestureRecognizer *commodityPicGestureRecognizer = (ZiZhiCommodityPicGestureRecognizer *)gestureRecognizer;
-    ZiZhiCommodityModel *model = [self.commodityData objectAtIndex:commodityPicGestureRecognizer.tag];
-    homeCommodityViewController.goodid = model.goodid;
-    [self.navigationController pushViewController:homeCommodityViewController animated:YES];
+    if (0 == commodityPicGestureRecognizer.tag) {
+        ZiZhiHomeVipViewController *homeVipViewController = [[ZiZhiHomeVipViewController alloc] init];
+        [self.navigationController pushViewController:homeVipViewController animated:YES];
+    } else {
+        ZiZhiHomeCommodityViewController *homeCommodityViewController = [[ZiZhiHomeCommodityViewController alloc] init];
+        ZiZhiCommodityModel *commodityModel = [self.commodityData objectAtIndex:commodityPicGestureRecognizer.tag];
+        homeCommodityViewController.goodid = commodityModel.goodid;
+        [self.navigationController pushViewController:homeCommodityViewController animated:YES];
+    }
 }
 
 - (void)touchCommodityPriceButton:(id)sender {
-    ZiZhiHomeCommodityViewController *homeCommodityViewController = [[ZiZhiHomeCommodityViewController alloc] init];
-    //数据处理
     UIButton *button = (UIButton *)sender;
-    ZiZhiCommodityModel *model = [self.commodityData objectAtIndex:button.tag];
-    homeCommodityViewController.goodid = model.goodid;
-    [self.navigationController pushViewController:homeCommodityViewController animated:YES];
+    if (0 == button.tag) {
+        ZiZhiHomeVipViewController *homeVipViewController = [[ZiZhiHomeVipViewController alloc] init];
+        [self.navigationController pushViewController:homeVipViewController animated:YES];
+    } else {
+        ZiZhiHomeCommodityViewController *homeCommodityViewController = [[ZiZhiHomeCommodityViewController alloc] init];
+        ZiZhiCommodityModel *commodityModel = [self.commodityData objectAtIndex:button.tag];
+        homeCommodityViewController.goodid = commodityModel.goodid;
+        [self.navigationController pushViewController:homeCommodityViewController animated:YES];
+    }
 }
 
 - (void)gotoAfficheDetail:(UIGestureRecognizer *)gesture {
@@ -217,24 +264,63 @@
 }
 
 - (void)requestCommodities {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSMutableDictionary *params = [NSMutableDictionary new];
-    ZiZhiCommodityModel *commodityModel = [self.commodityData objectAtIndex:0];
-    NSString *existids = commodityModel.goodid;
-    for(int i = 1; i < [self.commodityData count]; i++) {
-        ZiZhiCommodityModel *commodityModel = [self.commodityData objectAtIndex:i];
-        existids = [existids stringByAppendingString:[NSString stringWithFormat:@",%@", commodityModel.goodid]];
+    if ([self.commodityData count] > 1) {
+        ZiZhiCommodityModel *commodityModel = [self.commodityData objectAtIndex:1];
+        NSString *existids = commodityModel.goodid;
+        for(int i = 2; i < [self.commodityData count]; i++) {
+            ZiZhiCommodityModel *commodityModel = [self.commodityData objectAtIndex:i];
+            existids = [existids stringByAppendingString:[NSString stringWithFormat:@",%@", commodityModel.goodid]];
+        }
+        [params setObject:existids forKey:@"existids"];
     }
-    [params setObject:existids forKey:@"existids"];
+    
     [[ZiZhiNetworkManager sharedManager] get:k_url_commodity_list parameters:params success:^(NSDictionary *dictionary) {
         [self.tableView.header endRefreshing];
         ZiZhiNetworkResponseModel *model = [ZiZhiNetworkResponseModel objectWithKeyValues:dictionary];
         if (CodeSuccess == model.httpCode) {
+            [hud hide:YES afterDelay:0.0f];
             [self.commodityData addObjectsFromArray:[ZiZhiCommodityModel objectArrayWithKeyValuesArray:[dictionary objectForKey:@"content"]]];
             [self.tableView reloadData];
+        } else {
+            if (CodeNoData == model.httpCode) {
+                [self.tableView.footer noticeNoMoreData];
+            }
+            hud.mode = MBProgressHUDModeText;
+            hud.detailsLabelText = model.message;
+            [hud hide:YES afterDelay:kMBProgressHUDTipsTime];
         }
     } failure:^(NSInteger errorCode, NSString *errorMsg) {
         [self.tableView.footer endRefreshing];
-        CCLog(@"request notlist error:%@", errorMsg);
+        hud.mode = MBProgressHUDModeText;
+        hud.detailsLabelText = errorMsg;
+        [hud hide:YES afterDelay:kMBProgressHUDTipsTime];
+    }];
+}
+
+- (void)requestMainal {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSMutableDictionary *dictionary = [NSMutableDictionary new];
+    [[ZiZhiNetworkManager sharedManager] get:k_url_mainal parameters:dictionary success:^(NSDictionary *dictionary) {
+        [self.tableView.header endRefreshing];
+        ZiZhiNetworkResponseModel *model = [ZiZhiNetworkResponseModel objectWithKeyValues:dictionary];
+        if (CodeSuccess == model.httpCode) {
+            [hud hide:YES afterDelay:0.0f];
+            NSArray *array = [ZiZhiMainalModel objectArrayWithKeyValuesArray:[dictionary objectForKey:@"content"]];
+            ZiZhiMainalModel *vipModel = (ZiZhiMainalModel *)[array objectAtIndex:1];
+            [self.commodityData insertObject:vipModel atIndex:0];
+            [self.tableView reloadData];
+        }else {
+            hud.mode = MBProgressHUDModeText;
+            hud.detailsLabelText = model.message;
+            [hud hide:YES afterDelay:kMBProgressHUDTipsTime];
+        }
+    } failure:^(NSInteger errorCode, NSString *errorMsg) {
+        [self.tableView.header endRefreshing];
+        hud.mode = MBProgressHUDModeText;
+        hud.detailsLabelText = errorMsg;
+        [hud hide:YES afterDelay:kMBProgressHUDTipsTime];
     }];
 }
 /*

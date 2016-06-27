@@ -288,7 +288,12 @@
     [[ZiZhiNetworkManager sharedManager] post:k_url_program_enroll parameters:params success:^(NSDictionary *dictionary) {
         ZiZhiNetworkResponseModel *model = [ZiZhiNetworkResponseModel objectWithKeyValues:dictionary];
         hud.mode = MBProgressHUDModeText;
-        hud.detailsLabelText = model.message;
+        if (CodeSuccess == model.httpCode) {
+            hud.detailsLabelText = [NSString stringWithFormat:@"%@,点击我的报名查看", model.message];
+        } else {
+            hud.detailsLabelText = model.message;
+        }
+        
         [hud hide:YES afterDelay:kMBProgressHUDTipsTime];
         
         //申请成功，后自动登录（如果本地已经登录则不替换）

@@ -340,7 +340,7 @@
     }
     if ([Utils isBlankString:address]) {
         hud.mode = MBProgressHUDModeText;
-        hud.detailsLabelText = @"收票地址不能为空";
+        hud.detailsLabelText = @"收货地址不能为空";
         [hud hide:YES afterDelay:kMBProgressHUDTipsTime];
         [self.addressTextField becomeFirstResponder];
         return;

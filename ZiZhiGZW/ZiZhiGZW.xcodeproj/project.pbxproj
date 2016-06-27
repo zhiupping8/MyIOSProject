@@ -871,7 +871,7 @@
 				TargetAttributes = {
 					F9D0E3EA1C0AD6640012CAA4 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 3Y5AU78FS9;
+						DevelopmentTeam = 4F9Y5N2797;
 					};
 					F9D0E4061C0AD6640012CAA4 = {
 						CreatedOnToolsVersion = 7.1;
@@ -1225,7 +1225,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cctv.zsgz;
 				PRODUCT_NAME = "中视观众";
-				PROVISIONING_PROFILE = "10c0e431-110e-489d-b139-6b9d6934fe5b";
+				PROVISIONING_PROFILE = "b614d404-411e-49a5-a406-00a808777b35";
 			};
 			name = Debug;
 		};
@@ -1252,7 +1252,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cctv.zsgz;
 				PRODUCT_NAME = "中视观众";
-				PROVISIONING_PROFILE = "cd198122-1eac-4f4a-9cb1-9037c9213c47";
+				PROVISIONING_PROFILE = "027e25b9-9293-4090-81dd-b5ec461ff0ff";
 			};
 			name = Release;
 		};
