@@ -43,6 +43,8 @@
     [super viewDidLoad];
     
     [self initUI];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 212;
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self.commodityData removeAllObjects];
         [self requestBanner];
@@ -112,6 +114,7 @@
 }
 
 #pragma mark - UITableViewDataSource
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.commodityData count];
 }
@@ -161,7 +164,6 @@
         }
 
     }
-    
     return cell;
 }
 

@@ -102,7 +102,8 @@
     [super viewDidLoad];
     self.tableView.tableFooterView = [[UIView alloc]init];
     self.page = 1;
-    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 235;
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self requestBanner];
         [self requestNotList];
