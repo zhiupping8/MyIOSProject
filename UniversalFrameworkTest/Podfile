@@ -1,0 +1,13 @@
+platform :ios, "8.0"
+
+pod 'Mantle'
+pod 'Masonry'
+pod 'Reachability'
+pod 'BlocksKit'
+pod 'KVOController'
+pod 'ODRefreshControl'
+pod 'pop'
+
+target :UniversalFrameworkTestTests, :exclusive => true do
+# pod 'Kiwi'
+end

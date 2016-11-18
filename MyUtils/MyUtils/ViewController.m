@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     NSString *tmp = @" 1 2 3 4 5 \n";
-    NSLog(@"%@", [tmp trim]);
+    NSLog(@":%@asdf", [tmp trim]);
 }
 
 - (void)didReceiveMemoryWarning {
