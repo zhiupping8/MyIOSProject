@@ -1,0 +1,33 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '7.0'
+
+target "Coding" do
+    
+pod 'TTTAttributedLabel'
+pod 'RegexKitLite-NoWarning'
+pod 'hpple'
+pod 'MBProgressHUD'
+pod 'TPKeyboardAvoiding'
+pod 'BlocksKit'
+pod 'ReactiveCocoa'
+pod 'MMMarkdown'
+pod 'Masonry'
+pod 'NYXImagesKit'
+pod 'UIImage+BlurredFrame'
+pod 'POP+MCAnimate'
+pod 'PPiAwesomeButton'
+pod 'APParallaxHeader'
+pod 'SDCAlertView'
+pod 'MarqueeLabel'
+pod 'TMCache'
+pod 'iVersion'
+pod 'JazzHands'
+pod 'SSKeychain'
+pod 'UMengSocial'
+#pod 'evernote-cloud-sdk-ios', :git => 'https://github.com/evernote/evernote-cloud-sdk-ios.git', :branch => 'ios7'
+pod 'evernote-cloud-sdk-ios'
+pod 'UMengAnalytics'
+pod 'FLEX', '~> 2.0', :configurations => ['Debug']
+pod 'RDVTabBarController', '~> 1.1.9'
+
+end

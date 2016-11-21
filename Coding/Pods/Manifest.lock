@@ -1,0 +1,138 @@
+PODS:
+  - APParallaxHeader (0.1.6)
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - evernote-cloud-sdk-ios (2.0.2)
+  - FLEX (2.1.1)
+  - FontAwesome+iOS (0.1.4)
+  - hpple (0.2.0)
+  - iVersion (1.11.4)
+  - JazzHands (2.0.8)
+  - MarqueeLabel (2.7.5):
+    - MarqueeLabel/ObjC (= 2.7.5)
+  - MarqueeLabel/ObjC (2.7.5)
+  - Masonry (1.0.1)
+  - MBProgressHUD (0.9.2)
+  - MMMarkdown (0.5.4)
+  - NYXImagesKit (2.3)
+  - pop (1.0.9)
+  - POP+MCAnimate (2.0.1):
+    - pop (~> 1.0)
+    - POP+MCAnimate/Animations (= 2.0.1)
+    - POP+MCAnimate/Group (= 2.0.1)
+    - POP+MCAnimate/Internal (= 2.0.1)
+    - POP+MCAnimate/Shorthand (= 2.0.1)
+    - POP+MCAnimate/Velocity (= 2.0.1)
+  - POP+MCAnimate/Animations (2.0.1):
+    - pop (~> 1.0)
+    - POP+MCAnimate/Group
+    - POP+MCAnimate/Internal
+    - POP+MCAnimate/Shorthand
+    - POP+MCAnimate/Velocity
+  - POP+MCAnimate/Group (2.0.1):
+    - pop (~> 1.0)
+  - POP+MCAnimate/Internal (2.0.1):
+    - pop (~> 1.0)
+  - POP+MCAnimate/Shorthand (2.0.1):
+    - pop (~> 1.0)
+  - POP+MCAnimate/Velocity (2.0.1):
+    - pop (~> 1.0)
+    - POP+MCAnimate/Internal
+  - PPiAwesomeButton (1.5.2):
+    - FontAwesome+iOS
+  - RBBAnimation (0.4.0)
+  - RDVTabBarController (1.1.9)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - RegexKitLite-NoWarning (1.1.0)
+  - SDCAlertView (2.5.4):
+    - RBBAnimation (~> 0.3)
+    - SDCAutoLayout (~> 2.0)
+  - SDCAutoLayout (2.0.3)
+  - SSKeychain (1.4.0)
+  - TMCache (2.1.0)
+  - TPKeyboardAvoiding (1.3)
+  - TTTAttributedLabel (1.13.4)
+  - UIImage+BlurredFrame (0.0.4)
+  - UMengAnalytics (4.0.4)
+  - UMengSocial (5.0)
+
+DEPENDENCIES:
+  - APParallaxHeader
+  - BlocksKit
+  - evernote-cloud-sdk-ios
+  - FLEX (~> 2.0)
+  - hpple
+  - iVersion
+  - JazzHands
+  - MarqueeLabel
+  - Masonry
+  - MBProgressHUD
+  - MMMarkdown
+  - NYXImagesKit
+  - POP+MCAnimate
+  - PPiAwesomeButton
+  - RDVTabBarController (~> 1.1.9)
+  - ReactiveCocoa
+  - RegexKitLite-NoWarning
+  - SDCAlertView
+  - SSKeychain
+  - TMCache
+  - TPKeyboardAvoiding
+  - TTTAttributedLabel
+  - UIImage+BlurredFrame
+  - UMengAnalytics
+  - UMengSocial
+
+SPEC CHECKSUMS:
+  APParallaxHeader: 854bc48a2487ca12c702f8a236fec0d89cdac5c3
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  evernote-cloud-sdk-ios: 7a6e5402b837ea79ef0179caff5ffe7b4f235615
+  FLEX: 27b768fcae23a313a1eb115076d429180ca9b472
+  FontAwesome+iOS: 9070b682a9255ca0fdc34bcfb129ad0ba2b73b87
+  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
+  iVersion: 2b6ffe708672cb494ba3cab150a94800c2892e81
+  JazzHands: 355dc5c2b6fc38ee460d0ed7836c69539263f477
+  MarqueeLabel: bd476f1a91e4414a6aec4ea4096a9979e8c8c2ad
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MMMarkdown: 754f9154136d224178f51f2b2ba67a66a89d96ea
+  NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  POP+MCAnimate: a99e209148c602512de487f1160a44bf78572024
+  PPiAwesomeButton: 16f7279582fd36f65186b24b83ef876217363eb5
+  RBBAnimation: 4b2d66f6d993febce63cd564da934985313b9c59
+  RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  RegexKitLite-NoWarning: 365d208f8187997e33d9de8baeddfc00728596d8
+  SDCAlertView: 2e2b0ecc5f1ec367e45d83efa2e512688ca7fa55
+  SDCAutoLayout: e6885bb39ab8e2ec2ff84d158f38035f025f7420
+  SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
+  TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
+  TPKeyboardAvoiding: a5138f318c06fb3e151f886e18ce4a72695d9cbe
+  TTTAttributedLabel: 0a2ac7b2dd726d32a070dafb01446026b11e624f
+  UIImage+BlurredFrame: ad2f7195c6947ea3117c7d202f75a51958d5061a
+  UMengAnalytics: 4ed421fb3bca63b26fc13c947743cabf3831d199
+  UMengSocial: 48b67179c492a8cf7803fbb0438b8f55432e2fc1
+
+PODFILE CHECKSUM: ccd6da8bec893f86d45a4b27e6b755d2d73511df
+
+COCOAPODS: 1.1.1
