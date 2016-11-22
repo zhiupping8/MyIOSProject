@@ -75,6 +75,13 @@
 		73B154541DE2E6A7006C63E2 /* Procfile in Resources */ = {isa = PBXBuildFile; fileRef = 73B154191DE2E6A7006C63E2 /* Procfile */; };
 		73B154551DE2E6A7006C63E2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 73B1541A1DE2E6A7006C63E2 /* README.md */; };
 		73B154771DE2F1AA006C63E2 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B154761DE2F1AA006C63E2 /* RootTabBarController.m */; };
+		73B7084A1DE3EC38005084C5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B708491DE3EC38005084C5 /* BaseViewController.m */; };
+		73B7084D1DE3EC59005084C5 /* ProjectRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B7084C1DE3EC59005084C5 /* ProjectRootViewController.m */; };
+		73B708501DE3EC70005084C5 /* TaskRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B7084F1DE3EC70005084C5 /* TaskRootViewController.m */; };
+		73B708531DE3EC87005084C5 /* TweetRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B708521DE3EC87005084C5 /* TweetRootViewController.m */; };
+		73B708561DE3ECA4005084C5 /* MessageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B708551DE3ECA4005084C5 /* MessageRootViewController.m */; };
+		73B708591DE3ECB6005084C5 /* MeRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B708581DE3ECB6005084C5 /* MeRootViewController.m */; };
+		73B7085D1DE42F40005084C5 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B7085C1DE42F40005084C5 /* BaseNavigationViewController.m */; };
 		B0DCD2A69A186DE3637E362D /* libPods-Coding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE55A7A05E773F61D83D0B02 /* libPods-Coding.a */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +180,21 @@
 		73B1541A1DE2E6A7006C63E2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		73B154751DE2F1AA006C63E2 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
 		73B154761DE2F1AA006C63E2 /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
+		73B708481DE3EC38005084C5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		73B708491DE3EC38005084C5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		73B7084B1DE3EC59005084C5 /* ProjectRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectRootViewController.h; sourceTree = "<group>"; };
+		73B7084C1DE3EC59005084C5 /* ProjectRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectRootViewController.m; sourceTree = "<group>"; };
+		73B7084E1DE3EC70005084C5 /* TaskRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskRootViewController.h; sourceTree = "<group>"; };
+		73B7084F1DE3EC70005084C5 /* TaskRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskRootViewController.m; sourceTree = "<group>"; };
+		73B708511DE3EC87005084C5 /* TweetRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetRootViewController.h; sourceTree = "<group>"; };
+		73B708521DE3EC87005084C5 /* TweetRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetRootViewController.m; sourceTree = "<group>"; };
+		73B708541DE3ECA4005084C5 /* MessageRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageRootViewController.h; sourceTree = "<group>"; };
+		73B708551DE3ECA4005084C5 /* MessageRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageRootViewController.m; sourceTree = "<group>"; };
+		73B708571DE3ECB6005084C5 /* MeRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeRootViewController.h; sourceTree = "<group>"; };
+		73B708581DE3ECB6005084C5 /* MeRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeRootViewController.m; sourceTree = "<group>"; };
+		73B7085A1DE3EFAC005084C5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		73B7085B1DE42F40005084C5 /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
+		73B7085C1DE42F40005084C5 /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
 		DE55A7A05E773F61D83D0B02 /* libPods-Coding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Coding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -272,6 +294,7 @@
 				73B153D21DE2E427006C63E2 /* AppDelegate.m */,
 				73B153D31DE2E427006C63E2 /* Info.plist */,
 				73B153D41DE2E427006C63E2 /* main.m */,
+				73B7085A1DE3EFAC005084C5 /* PrefixHeader.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -415,6 +438,7 @@
 		73B154581DE2ECA2006C63E2 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				73B708471DE3EBEB005084C5 /* Base */,
 				73B154591DE2ECA2006C63E2 /* Login */,
 				73B1545C1DE2ECA2006C63E2 /* Project */,
 				73B1545D1DE2ECA2006C63E2 /* Task */,
@@ -534,6 +558,8 @@
 		73B154651DE2ED9F006C63E2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				73B7084B1DE3EC59005084C5 /* ProjectRootViewController.h */,
+				73B7084C1DE3EC59005084C5 /* ProjectRootViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -555,6 +581,8 @@
 		73B154681DE2EDCD006C63E2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				73B7084E1DE3EC70005084C5 /* TaskRootViewController.h */,
+				73B7084F1DE3EC70005084C5 /* TaskRootViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -576,6 +604,8 @@
 		73B1546B1DE2EDF9006C63E2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				73B708511DE3EC87005084C5 /* TweetRootViewController.h */,
+				73B708521DE3EC87005084C5 /* TweetRootViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -597,6 +627,8 @@
 		73B1546E1DE2EE16006C63E2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				73B708541DE3ECA4005084C5 /* MessageRootViewController.h */,
+				73B708551DE3ECA4005084C5 /* MessageRootViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -618,6 +650,8 @@
 		73B154711DE2EE3B006C63E2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				73B708571DE3ECB6005084C5 /* MeRootViewController.h */,
+				73B708581DE3ECB6005084C5 /* MeRootViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -643,6 +677,17 @@
 				73B154761DE2F1AA006C63E2 /* RootTabBarController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		73B708471DE3EBEB005084C5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				73B708481DE3EC38005084C5 /* BaseViewController.h */,
+				73B708491DE3EC38005084C5 /* BaseViewController.m */,
+				73B7085B1DE42F40005084C5 /* BaseNavigationViewController.h */,
+				73B7085C1DE42F40005084C5 /* BaseNavigationViewController.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		789E463B01F367E0FFC6E4F1 /* Pods */ = {
@@ -900,10 +945,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B708531DE3EC87005084C5 /* TweetRootViewController.m in Sources */,
 				73B154551DE2E6A7006C63E2 /* README.md in Sources */,
+				73B7084A1DE3EC38005084C5 /* BaseViewController.m in Sources */,
+				73B7084D1DE3EC59005084C5 /* ProjectRootViewController.m in Sources */,
+				73B7085D1DE42F40005084C5 /* BaseNavigationViewController.m in Sources */,
+				73B708561DE3ECA4005084C5 /* MessageRootViewController.m in Sources */,
 				73B154771DE2F1AA006C63E2 /* RootTabBarController.m in Sources */,
+				73B708591DE3ECB6005084C5 /* MeRootViewController.m in Sources */,
 				73B153D71DE2E427006C63E2 /* main.m in Sources */,
 				73B153D51DE2E427006C63E2 /* AppDelegate.m in Sources */,
+				73B708501DE3EC70005084C5 /* TaskRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1056,6 +1108,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NB7MJZGXM3;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Coding/Support Files/PrefixHeader.pch";
 				INFOPLIST_FILE = Coding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.encompass8.coding.Coding;
@@ -1069,6 +1122,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NB7MJZGXM3;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Coding/Support Files/PrefixHeader.pch";
 				INFOPLIST_FILE = Coding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.encompass8.coding.Coding;

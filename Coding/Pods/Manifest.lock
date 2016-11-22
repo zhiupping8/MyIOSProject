@@ -63,6 +63,7 @@ PODS:
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
   - RegexKitLite-NoWarning (1.1.0)
+  - RKSwipeBetweenViewControllers (0.1.4)
   - SDCAlertView (2.5.4):
     - RBBAnimation (~> 0.3)
     - SDCAutoLayout (~> 2.0)
@@ -93,6 +94,7 @@ DEPENDENCIES:
   - RDVTabBarController (~> 1.1.9)
   - ReactiveCocoa
   - RegexKitLite-NoWarning
+  - RKSwipeBetweenViewControllers
   - SDCAlertView
   - SSKeychain
   - TMCache
@@ -123,6 +125,7 @@ SPEC CHECKSUMS:
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   RegexKitLite-NoWarning: 365d208f8187997e33d9de8baeddfc00728596d8
+  RKSwipeBetweenViewControllers: 2236038119d6f7eb64ff589eb423fcda80cbe962
   SDCAlertView: 2e2b0ecc5f1ec367e45d83efa2e512688ca7fa55
   SDCAutoLayout: e6885bb39ab8e2ec2ff84d158f38035f025f7420
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
@@ -133,6 +136,6 @@ SPEC CHECKSUMS:
   UMengAnalytics: 4ed421fb3bca63b26fc13c947743cabf3831d199
   UMengSocial: 48b67179c492a8cf7803fbb0438b8f55432e2fc1
 
-PODFILE CHECKSUM: ccd6da8bec893f86d45a4b27e6b755d2d73511df
+PODFILE CHECKSUM: 1dc97b147154b76fe26f0d334460edf9efef5498
 
 COCOAPODS: 1.1.1

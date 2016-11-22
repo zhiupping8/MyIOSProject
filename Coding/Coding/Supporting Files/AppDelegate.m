@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RootTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,10 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    RootTabBarController *rootTabBarViewController = [[RootTabBarController alloc] init];
+    self.window.rootViewController = rootTabBarViewController;
+    
     
     return YES;
 }
