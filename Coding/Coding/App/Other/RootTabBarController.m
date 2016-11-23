@@ -42,7 +42,8 @@
     UINavigationController *navTaskController = [[BaseNavigationViewController alloc] initWithRootViewController:taskRootViewController];
     
     RKSwipeBetweenViewControllers *navTweetController = [[RKSwipeBetweenViewControllers alloc] init];
-    [navTweetController.viewControllerArray addObjectsFromArray:@[]];
+    TweetRootViewController *tmpTweetRootViewController = [[TweetRootViewController alloc] init];
+    [navTweetController.viewControllerArray addObjectsFromArray:@[tmpTweetRootViewController]];
     navTweetController.buttonText = @[@"冒泡广场", @"朋友圈", @"热门冒泡"];
     
     MessageRootViewController *messageRootViewController = [[MessageRootViewController alloc] init];
