@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>
+        测试页面
+    </title>
+    <script type="text/javascript" src="ljapp.js"></script>
+    <script type="text/javascript">
+        //推送
+        function getRegistrationIR() {
+            var registrationIDP = document.getElementById("registrationIDP");
+            var registrationID1 = null;
+            ljapp.getRegistrationID(function (registrationID){
+                registrationID1 = registrationID;
+            });
+            registrationIDP.innerHTML = registrationID1;
+        }
+
+        var receiveNewMessageCallback = function receiveNewMessageCallback(userInfo) {
+            var pushDiv = document.getElementById("pushNotification");
+            var receiveNotificationP = document.createElement("p");
+            receiveNotificationP.innerHTML = userInfo;
+            pushDiv.insertAdjacentElement("beforeEnd", receiveNotificationP);
+        }
+
+        var touchMessageCallback = function touchMessageCallback(userInfo) {
+            var pushDiv = document.getElementById("pushNotification");
+            var touchNotificationP = document.createElement("p");
+            touchNotificationP.innerHTML = userInfo;
+            pushDiv.insertAdjacentElement("beforeEnd", touchNotificationP);
+        }
+
+        //获取当前位置回调
+        var getLocationCallback = function getLocationCallback(locationInfo) {
+            var getLocationDiv = document.getElementById("getLocation");
+            var getLocationResultP = document.createElement("p");
+            getLocationResultP.innerHTML = locationInfo;
+            getLocationDiv.insertAdjacentElement("beforeEnd", getLocationResultP);
+        }
+
+        //扫描回调
+        var scanCallback = function scanCallback(resultInfo) {
+            var scanDiv = document.getElementById("scan");
+            var scanResultP = document.createElement("p");
+            scanResultP.innerHTML = resultInfo.type;
+            scanDiv.insertAdjacentElement("beforeEnd", scanResultP);
+        }
+
+        //分享回调
+        var shareCallback = function shareCallback(code) {
+            var shareDiv = document.getElementById("share");
+            var shareResultP = document.createElement("p");
+            shareResultP.innerHTML = "share result code: " + code;
+            shareDiv.insertAdjacentElement("beforeEnd", shareResultP);
+        }
+
+        //地图回调
+        var openMapCallback = function openMapCallback(resultInfo) {
+            var opeMapDiv = document.getElementById("openMap");
+            var opeMapResultP = document.createElement("p");
+            opeMapResultP.innerHTML = "open map resultInfo: " + resultInfo.code;
+            opeMapDiv.insertAdjacentElement("beforeEnd", opeMapResultP);
+        }
+
+        //微信支付
+        var wxPayCallback = function wxPayCallback(code) {
+            var wxPayDiv = document.getElementById("wxPay");
+            var wxPayResultP = document.createElement("p");
+            wxPayResultP.innerHTML = "wx pay code: " + code;
+            wxPayDiv.insertAdjacentElement("beforeEnd", wxPayResultP);
+        }
+
+        //支付宝支付
+        var aliPayCallback = function aliPayCallback(resultInfo) {
+            var aliPayDiv = document.getElementById("aliPay");
+            var aliPayResultP = document.createElement("p");
+            aliPayResultP.innerHTML = "ali pay code: " + resultInfo;
+            aliPayDiv.insertAdjacentElement("beforeEnd", aliPayResultP);
+        }
+    
+    var scanGoodsCallback = function scanGoodsCallback(resultInfo) {
+        var scangoodsDiv = document.getElementById("ScanGoods");
+        var aliPayResultP = document.createElement("p");
+        aliPayResultP.innerHTML = "scan goods: " + resultInfo;
+        scangoodsDiv.insertAdjacentElement("beforeEnd", aliPayResultP);
+    }
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        ljapp.init();
+        ljapp.regitsterScanCallback(scanCallback);
+        ljapp.registMessageMethod('receiveNewMessageCallback', 'touchMessageCallback');
+    </script>
+    <div><iframe src="//jsconsole.com/js/remote.js?eb46ecc9-fab2-4d70-b8a0-97688c77e4f3" style="display: none;"></iframe></div>
+    
+    <div id="pushNotification">
+        <!-- <input type="button" id="registrationID" value="用户推送标识" onclick="getRegistrationIR(); "> -->
+        <input type="button" id="registrationID" value="用户推送标识" onclick="getRegistrationIR(); ">
+        <p id="registrationIDP"></p>
+    </div>
+    <div id="getLocation">
+        <input type="button" id="getLocationButton" value="获取当前地理位置" onclick="ljapp.getLocation( 'WGS-84', getLocationCallback); ">
+        <p></p>
+    </div>
+    <div id="scan">
+        <input type="button" id="scanButton" value="扫一扫 " onclick="ljapp.scan(scanCallback); ">
+        <p></p>
+    </div>
+    <div id="share">
+        <input type="button" id="shareButton" value="分享" onclick="ljapp.share({ 'images': 'http://www.mob.com/images/logo_black.png', 'title': 'shareTitle', 'text': 'shareText', 'url': 'http://www.lijiababy.com.cn/'}, shareCallback); ">
+        <!--        <input type="button " id="shareButton " value="分享 " onclick="share({ 'images': 'http://www.mob.com/images/logo_black.png'}, shareCallback); ">-->
+        <p></p>
+    </div>
+    <div id="openMap">
+        <input type="button" id="openMapButton" value="地图 " onclick="ljapp.openMap({ 'coordtype': 'BD-09', 'locationName': '北京西站', 'locationAddress': '北京市丰台区莲花池东路118号', 'latitude': 39.900676, 'longitude': 116.327841}, openMapCallback); ">
+        <p></p>
+    </div>
+    <div id="wxPay">
+        <input type="button" id="wxPayButton" value="微信支付" onclick="ljapp.wxPay({'partnerid':'1263779101','package':'Sign=WXPay','prepayid':'wx201706212203125d52593e380221031356','timestamp':'1498053792','noncestr':'dFzuBFhHyIrc4lqr','appid':'wx4441d3e858eea533','sign':'70B4FE2273B75C714D1058737D6A5418'}, wxPayCallback); ">
+        <p></p>
+    </div>
+    <div id="aliPay">
+        <input type="button" id="aliPaypButton" value="支付宝支付" onclick="ljapp.aliPay(
+            'partner=2088101491536086&seller_id=lijiababymyqjd@126.com&out_trade_no=20170508151220-305904&subject=丽家宝贝-母婴购物上丽家：订单305904&body=母婴用品与服务&total_fee=0.01&notify_url=http://shopper.ljmall.dev.dmright.com/payment-channel/alipay-app/trade/notify&service=mobile.securitypay.pay&payment_type=1&_input_charset=utf-8&it_b_pay=1436m&sign=wO6o2dMMUTXKy3Ng8pMKtxJ6cK5Pa9zq7Ixq2fMQpTdGqJtJypVfaiowdhNF1PfPvByc1caD0XuhBkOvxVodVxeM7zoNtHzfPAJ%2BUA7ylM9ImG03fqhUuYN%2BdRDqHUqpf19Vb29Wt44lhuAzz6XNH0QhoqBjl4SHqPeCPfHf5o8%3D&sign_type=RSA',aliPayCallback); ">
+        <P></P>
+    </div>
+    <div id="longTime">
+        <!-- <input type="button " id="shareButton " value="分享 " font-size:50px;" onclick="share({'images':'http://www.mob.com/images/logo_black.png','title':'shareTitle','text':'shareText','url':'http://www.lijiababy.com.cn/'}, shareCallback);">        -->
+        <input type="button" id="longTouchButton" value="长按" onclick="ljapp.longTimeTouch({ 'title': 'title', 'text': 'text', 'images':
+            'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1498065375748&di=26bec9899e7c3679864c0db8aa62f570&imgtype=0&src=http%3A%2F%2Fimgs.focus.cn%2Fupload%2Fnews%2F11955%2Fb_119546650.jpg'}, shareCallback, scanCallback); ">  
+        <p></p>
+    </div>
+    <div id="ScanGoods">
+        <!-- <input type="button " id="shareButton " value="分享 " font-size:50px;" onclick="share({'images':'http://www.mob.com/images/logo_black.png','title':'shareTitle','text':'shareText','url':'http://www.lijiababy.com.cn/'}, shareCallback);">        -->
+        <input type="button" id="scangoods" value="快结账" onclick="ljapp.scanGoods(scanGoodsCallback); ">
+            <p></p>
+            </div>
+    <div>
+</body>
+
+<!-- <script type="text/javascript ">
+        function scan(callback) {
+
+        }
+    </script> -->
+
+
+</html>

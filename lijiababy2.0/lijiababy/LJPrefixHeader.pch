@@ -1,0 +1,33 @@
+//
+//  LJPrefixHeader.pch
+//  lijiababy
+//
+//  Created by YongZhi on 23/04/2017.
+//  Copyright © 2017 Upping8. All rights reserved.
+//
+
+#ifndef LJPrefixHeader_pch
+#define LJPrefixHeader_pch
+
+//#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "NSObject+JSCreateContext.h"
+
+#ifndef __OPTIMIZE__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+#endif
+
+//3d Touch Notification
+#define k3DTouchShare @"3DTouchShareAppNotifiction"
+#define k3DTouchScan @"3DTouchScanNotification"
+#define k3DTouchMyHome @"3DTouchMyLiJiaNotification"
+#define k3DTouchMyCart @"3DTouchMyCartNotification"
+#define k3DTouchReceiving @"3DTouchReceivingNotification"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* LJPrefixHeader_pch */
+

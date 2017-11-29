@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchScopes
+   version = "1.1">
+   <Scope
+      name = "My Scope"
+      predicate = "location_workspace_group == &quot;{\&quot;IDEValuesAsTree\&quot;:{\&quot;lijiababy\&quot;:{\&quot;lijiababy\&quot;:{\&quot;lijiababy\&quot;:{\&quot;Vendor\&quot;:{\&quot;AFNetworking\&quot;:\&quot;\&quot;}}}}}}&quot;"
+      uuid = "BAF90988-14B9-4AD0-99BD-040D72D5F556">
+   </Scope>
+</SearchScopes>

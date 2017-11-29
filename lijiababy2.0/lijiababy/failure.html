@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>
+        网络出错
+    </title>
+    <style type="text/css">
+        #main {
+            height: 98%;
+            width: 95%;
+            position: absolute;
+        }
+        
+        .d1 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100vw;
+            height: 100vw;
+            margin-left: -50vw;
+            margin-top: -50vw;
+            text-align: center;
+        }
+        
+        * {
+            outline: 0px solid transparent;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-touch-callout: none;
+        }
+    </style>
+
+    <script>
+        var retry = function retry() {
+            ljfailure.retry();
+        }
+    </script>
+</head>
+
+<body contenteditable="false">
+    <script>
+        // document.onmousemove = function() {
+        //     return false;
+        // }
+        document.ondragstart = "return false";
+    </script>
+    <div id="main" onclick="retry();">
+        <div class="d1">
+            <img src="failure_img.png">
+            <p>网络出错，轻触屏幕重新加载</p>
+        </div>
+    </div>
+</body>
+
+
+
+</html>
