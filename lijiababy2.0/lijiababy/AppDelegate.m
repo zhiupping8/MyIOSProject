@@ -101,7 +101,10 @@
     NSDictionary *remoteNotification = [launchOptions objectForKey: UIApplicationLaunchOptionsRemoteNotificationKey];
     if (remoteNotification) {
         //用户点击apn进入程序
-        [[LJJPUSHController shareController] touchNotification:remoteNotification];
+//        [[LJJPUSHController shareController] touchNotification:remoteNotification];
+        ViewController *tmpController = (ViewController *)[self topViewController];
+        [tmpController touchNotificationForFirst:remoteNotification];
+        
 //        if ([[UIApplication sharedApplication] applicationIconBadgeNumber] > 0) {
 //            [UIApplication sharedApplication].applicationIconBadgeNumber--;
 //        };
@@ -246,7 +249,9 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSDictionary * userInfo = response.notification.request.content.userInfo;
     if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
         [JPUSHService handleRemoteNotification:userInfo];
-        [[LJJPUSHController shareController] touchNotification:userInfo];
+//        [[LJJPUSHController shareController] touchNotification:userInfo];
+        ViewController *tmpController = (ViewController *)[self topViewController];
+        [tmpController touchNotificationForFirst:userInfo];
     }
     completionHandler();  // 系统要求执行这个方法
 }
@@ -256,7 +261,13 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     
     // Required, iOS 7 Support
     [JPUSHService handleRemoteNotification:userInfo];
-    [[LJJPUSHController shareController] receiveNewNotification:userInfo];
+    if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive) {
+        [[LJJPUSHController shareController] receiveNewNotification:userInfo];
+    } else {
+//        [[LJJPUSHController shareController] touchNotification:userInfo];
+        ViewController *tmpController = (ViewController *)[self topViewController];
+        [tmpController touchNotificationForFirst:userInfo];
+    }
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
@@ -267,7 +278,9 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive) {
         [[LJJPUSHController shareController] receiveNewNotification:userInfo];
     } else {
-        [[LJJPUSHController shareController] touchNotification:userInfo];
+//        [[LJJPUSHController shareController] touchNotification:userInfo];
+        ViewController *tmpController = (ViewController *)[self topViewController];
+        [tmpController touchNotificationForFirst:userInfo];
     }
     
 }

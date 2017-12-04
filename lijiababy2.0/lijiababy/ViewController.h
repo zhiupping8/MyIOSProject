@@ -24,6 +24,8 @@
 
 - (void)gotoNearby;
 
+- (void)touchNotificationForFirst:(NSDictionary *)userInfo;
+
 
 @end
 

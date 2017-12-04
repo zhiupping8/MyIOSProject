@@ -29,7 +29,7 @@
     [self add3DTouchMyHomeNotification];
     [self add3DTouchMyReceivingNotification];
     
-    [self addTouchNotification];
+//    [self addTouchNotification];
     
 //    [self addGoToCartNotification];
 
@@ -65,7 +65,7 @@
     [self remove3DTouchMyHomeNotification];
     [self remove3DTouchMyReceivingNotification];
     
-    [self removeTouchNotificaiton];
+//    [self removeTouchNotificaiton];
 //    [self removeGoToCartNotificaiton];
 }
 
@@ -151,6 +151,16 @@
 
 - (void)removeGoToCartNotificaiton {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:kGoToCartNotification object:nil];
+}
+
+- (void)touchNotificationForFirst:(NSDictionary *)userInfo {
+    NSDictionary *iOSInfo = [userInfo objectForKey:@"ios"];
+    NSDictionary *extrasInfo = [iOSInfo objectForKey:@"extras"];
+    if ([extrasInfo objectForKey:@"url"]) {
+//        LJNotificationWebViewController *webView = [[LJNotificationWebViewController alloc] initWithURL:[extrasInfo objectForKey:@"url"]];
+//        [self.navigationController pushViewController:webView animated:YES];
+        [self loadRequestWithURLString:[extrasInfo objectForKey:@"url"]];
+    }
 }
 
 - (void)touchNotification:(NSNotification *)notification {
